@@ -1,0 +1,136 @@
+# PANDUAN LENGKAP CARA MENGGUNAKAN APLIKASI
+# KALKULATOR RAB PRO MASTER (v2.0)
+### Berbasis Standar DJBK No. 47 Tahun 2026, HSD 35 Kab/Kota Jawa Tengah, & WBS
+
+---
+
+## 1. CARA MENJALANKAN APLIKASI (CARA RUN)
+
+### A. Di Komputer / Laptop:
+1. Pastikan **Node.js** sudah terinstal di komputer.
+2. Buka folder proyek di Terminal / Command Prompt / PowerShell:
+   ```bash
+   cd "d:\Coding 2\budi"
+   ```
+   *(atau pada folder `contoh 1`)*
+3. Jalankan server aplikasi:
+   ```bash
+   node server.js
+   ```
+   *(atau gunakan perintah `npm start`)*
+4. Buka browser (Google Chrome, Edge, Firefox), lalu buka alamat:
+   ```
+   http://localhost:3000
+   ```
+
+### B. Cara Membuka di HP / Smartphone (Android & iPhone):
+Aplikasi ini sudah **100% responsif** dan dapat dibuka langsung melalui browser HP tanpa perlu instalasi aplikasi:
+1. Pastikan HP dan Laptop terhubung ke **jaringan Wi-Fi yang sama** (atau HP menyalakan Hotspot tethering ke laptop).
+2. Cari tahu alamat IP laptop Anda (bisa dilihat melalui terminal dengan mengetik `ipconfig`, contoh: `192.168.1.15`).
+3. Buka browser di HP (Chrome / Safari), lalu ketik alamat:
+   ```
+   http://[IP-LAPTOP]:3000
+   ```
+   *Contoh:* `http://192.168.1.15:3000`
+
+---
+
+## 2. PENGENALAN DATA STANDAR RESMI YANG TERINTEGRASI
+
+Aplikasi ini telah terisi dengan 3 database teknis resmi:
+1. **DJBK No. 47 Tahun 2026 (Cipta Karya)**:
+   Berisi **1.932 item AHSP** lengkap dengan rincian koefisien bahan, upah tenaga kerja, dan peralatan.
+2. **HSD 35 Kabupaten/Kota Jawa Tengah 2026**:
+   Harga satuan dasar otomatis menyesuaikan indeks wilayah yang Anda pilih (misal: Kota Semarang, Surakarta, Banyumas, Cilacap, Kudus, dll).
+3. **Standar WBS (Work Breakdown Structure)**:
+   Struktur hierarki pekerjaan konstruksi gedung berstandar profesional (Pekerjaan Persiapan, Tanah & Pondasi, Struktur Beton, Dinding & Plesteran, Atap & Plafon, MEP, hingga Finishing).
+
+---
+
+## 3. PANDUAN PENGGUNAAN FITUR LANGKAH DEMI LANGKAH
+
+### LANGKAH 1: Kelola Proyek & Wilayah HSD
+1. **Pilih atau Buat Proyek**:
+   - Di bagian atas (Header), gunakan dropdown **"Proyek"** untuk berganti proyek yang sudah ada.
+   - Klik tombol **"+ Baru"** untuk membuat proyek baru, lalu masukkan nama proyek, pemilik, lokasi, dan tanggal.
+2. **Pilih Wilayah Acuan HSD**:
+   - Klik dropdown wilayah berlogo pin merah 📍 di header (misal: *Kota Semarang*, *Kab. Banyumas*, dll).
+   - Saat wilayah diubah, seluruh harga satuan AHSP otomatis terhitung ulang dengan indeks pengali wilayah tersebut.
+
+---
+
+### LANGKAH 2: Mengisi & Menyusun RAB (Tab "RAB & WBS")
+Tab ini adalah lembar kerja utama untuk menyusun Rencana Anggaran Biaya:
+1. **Melihat Hierarki WBS**:
+   Pekerjaan tersusun rapi berdasarkan kategori hierarki WBS (Pekerjaan Persiapan, Struktur, Arsitektur, dll).
+2. **Menambah Item Pekerjaan dari Katalog DJBK 2026**:
+   - Klik tombol hijau **"+ Tambah dari Katalog DJBK"** di bagian atas atau pada kategori yang diinginkan.
+   - Modal/pop-up katalog akan terbuka menampilkan 1.932 item pekerjaan.
+   - Ketik kata kunci pada kotak pencarian (contoh: `beton`, `batu kali`, `keramik`, `cat`).
+   - Pilih item yang sesuai, lalu klik **"Gunakan Item"**.
+3. **Mengisi / Mengubah Volume Pekerjaan**:
+   - Langsung ketik angka volume pada kolom **Volume** di tabel RAB.
+   - Total harga per baris, subtotal per kategori, PPN 11%, dan Total Akhir RAB otomatis terhitung secara *real-time*.
+4. **Menghapus atau Mengedit Baris**:
+   - Klik ikon tong sampah 🗑️ di sebelah kanan baris untuk menghapus item yang tidak digunakan.
+
+---
+
+### LANGKAH 3: Menggunakan Kalkulator Volume Otomatis (Tab "Kalkulator Volume")
+Jika Anda tidak ingin menghitung volume pekerjaan secara manual, gunakan 4 kalkulator pembantu praktis:
+
+1. **Hitung Luas Dinding & Plesteran**:
+   - Masukkan *Panjang Dinding*, *Tinggi Dinding*, serta luasan *Pengurangan Pintu & Jendela*.
+   - Klik **"+ Terapkan ke RAB"** untuk otomatis memasukkan volume pasangan bata dan plesteran 2 sisi ke proyek.
+2. **Hitung Pondasi Batu Kali (Trapesium)**:
+   - Masukkan *Total Panjang Pondasi*, *Tinggi Pondasi*, *Lebar Atas*, dan *Lebar Bawah*.
+   - Hasil volume batu kali dan estimasi galian tanah otomatis dihitung.
+   - Klik **"+ Terapkan ke RAB (Pondasi & Galian)"**.
+3. **Hitung Beton Sloof & Kolom**:
+   - Masukkan *Panjang Sloof*, *Tinggi Kolom*, serta ukuran penampang (Lebar x Tinggi dlm cm).
+   - Klik **"+ Terapkan ke RAB"** untuk memasukkan volume cor beton.
+4. **Hitung Lantai, Plafon & Atap**:
+   - Masukkan dimensi denah bangunan (panjang & lebar), lebar overstek tritisan, dan sudut kemiringan atap (°).
+   - Volume bidang miring atap otomatis dikoreksi dengan rumus cosinus.
+   - Klik **"+ Terapkan ke RAB"**.
+
+---
+
+### LANGKAH 4: Estimasi Cepat Berdasarkan Luas / m² (Tab "Estimator Cepat")
+Gunakan fitur ini untuk membuat estimasi anggaran awal (rough cost estimate) sebelum membuat desain mendalam:
+1. Masukkan rencana **Luas Bangunan (m²)**.
+2. Pilih tipe standar bangunan (misal: *Rumah Sederhana*, *Rumah Menengah*, *Rumah Mewah*, *Ruko*, atau *Gudang*).
+3. Sistem akan menghitung estimasi biaya total, biaya per m², dan simulasi pembagian anggaran per kelompok pekerjaan.
+
+---
+
+### LANGKAH 5: Memeriksa Analisa AHSP (Tab "Katalog AHSP DJBK")
+Gunakan tab ini untuk melihat detail *breakdown* analisa harga satuan:
+- Melihat rincian bahan material yang dibutuhkan beserta koefisiennya.
+- Melihat rincian upah tenaga kerja (Pekerja, Tukang Batu, Tukang Kayu, Kepala Tukang, Mandor).
+- Melihat peralatan yang digunakan.
+
+---
+
+### LANGKAH 6: Simpan, Export ke Excel, & Cetak RAB
+
+1. **Menyimpan Proyek**:
+   - Klik tombol biru **"Simpan"** di bilah navigasi header atas, atau cukup tekan kombinasi tombol keyboard:
+     `Ctrl + S`
+   - Perubahan tersimpan aman ke database server (`data/projects.json`).
+2. **Export ke Excel / CSV**:
+   - Klik tombol **"Excel"** di header atas.
+   - File spreadsheet berformat CSV akan otomatis terunduh lengkap dengan seluruh kategori WBS, nomor kode, satuan, volume, harga satuan, dan total biaya. File ini dapat langsung dibuka di Microsoft Excel, Google Sheets, atau LibreOffice.
+3. **Cetak Dokumen Resmi (Format A4)**:
+   - Klik tombol hijau **"Cetak"** di header atas.
+   - Jendela pratinjau format cetak resmi berstandar A4 akan tampil lengkap dengan kop proyek, tabel rekapitulasi biaya, dan kolom tanda tangan (Dibuat Oleh / Disetujui Oleh).
+   - Klik tombol **"Print Dokumen"** untuk langsung mencetak ke printer fisik atau memilih opsi **"Save as PDF"** di jendela printer.
+
+---
+
+## 4. SHORTCUT & TIPS PENGGUNAAN CEPAT
+- **Ganti Mode Gelap / Terang**: Klik ikon matahari/bulan ☀️/🌙 di pojok kanan atas.
+- **Simpan Cepat**: Tekan `Ctrl + S`.
+- **Navigasi Tab Cepat**: Klik menu tab: *Ringkasan*, *RAB & WBS*, *Kalkulator Volume*, *Estimator Cepat*, atau *Katalog AHSP*.
+- **Data Tersimpan Otomatis**: Setiap Anda mengubah volume pada tabel RAB, nilai total proyek langsung diperbarui secara instan.
+
