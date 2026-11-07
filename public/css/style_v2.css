@@ -575,3 +575,605 @@
   font-size: 0.84rem;
   padding: 0.55rem 1rem;
 }
+
+
+/* ===================================================================
+   COMPREHENSIVE MOBILE RESPONSIVE SYSTEM (SMARTPHONES & TABLETS)
+   Fixes: Horizontal overflow, hidden buttons, modal overlapping, layout squishing
+   =================================================================== */
+
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+  position: relative;
+}
+
+#app, .app-layout {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  /* 1. APP HEADER: Clean stacked layout without horizontal overflow */
+  .app-header {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 0.65rem 0.85rem !important;
+    gap: 0.65rem !important;
+    min-height: auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 100 !important;
+  }
+
+  .header-left {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .brand {
+    gap: 0.6rem !important;
+  }
+
+  .brand-icon {
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+  .brand-title {
+    font-size: 1.05rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .brand-subtitle {
+    display: none !important;
+  }
+
+  .header-center {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.45rem !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .project-selector-wrapper {
+    display: flex !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0.4rem 0.65rem !important;
+    gap: 0.4rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .project-label {
+    display: none !important;
+  }
+
+  .project-select {
+    flex: 1 1 auto !important;
+    max-width: none !important;
+    width: auto !important;
+    font-size: 0.84rem !important;
+    text-overflow: ellipsis !important;
+    min-width: 0 !important;
+  }
+
+  #btnNewProject {
+    flex-shrink: 0 !important;
+    padding: 0.4rem 0.65rem !important;
+    font-size: 0.78rem !important;
+  }
+
+  .region-quick-select-wrapper {
+    display: flex !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    padding: 0.4rem 0.65rem !important;
+    gap: 0.4rem !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .header-wilayah-select {
+    flex: 1 1 auto !important;
+    max-width: none !important;
+    width: auto !important;
+    font-size: 0.82rem !important;
+    min-width: 0 !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .region-factor-badge {
+    flex-shrink: 0 !important;
+  }
+
+  .header-right {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr 40px !important;
+    gap: 0.45rem !important;
+    width: 100% !important;
+    align-items: center !important;
+  }
+
+  .header-right .btn {
+    padding: 0.5rem 0.35rem !important;
+    font-size: 0.78rem !important;
+    justify-content: center !important;
+    min-height: 38px !important;
+    gap: 0.35rem !important;
+  }
+
+  .header-right .btn span {
+    display: inline-block !important;
+    font-size: 0.76rem !important;
+  }
+
+  #btnThemeToggle {
+    width: 40px !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    padding: 0 !important;
+    justify-content: center !important;
+  }
+
+  /* 2. MAIN NAVIGATION TABS */
+  .main-tabs {
+    padding: 0 0.6rem !important;
+    gap: 0.3rem !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    -webkit-overflow-scrolling: touch !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .tab-btn {
+    padding: 0.65rem 0.8rem !important;
+    font-size: 0.8rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* 3. KPI BANNER */
+  .kpi-banner {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.65rem !important;
+    padding: 0.75rem 0.75rem 0.25rem 0.75rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .kpi-card {
+    padding: 0.75rem 0.85rem !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .kpi-value-lg {
+    font-size: 1.25rem !important;
+    word-break: break-word !important;
+  }
+
+  .kpi-value {
+    font-size: 1.05rem !important;
+    word-break: break-word !important;
+  }
+
+  /* 4. CONTENT BODY & CONTAINER */
+  .content-body {
+    padding: 0.75rem 0.75rem 6.5rem 0.75rem !important; /* Large bottom padding so floating bottom bar never covers content */
+    width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  /* 5. TABLE CONTROLS BAR (TAB RAB) */
+  .table-controls-bar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.65rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .controls-left, .controls-right {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    min-width: 0 !important;
+  }
+
+  .search-box {
+    width: 100% !important;
+  }
+
+  .search-box input {
+    width: 100% !important;
+    font-size: 0.88rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .filter-dropdown {
+    width: 100% !important;
+  }
+
+  .filter-dropdown select {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .controls-right .btn {
+    width: 100% !important;
+    min-height: 42px !important;
+    justify-content: center !important;
+    font-size: 0.85rem !important;
+  }
+
+  .view-mode-toggle {
+    width: 100% !important;
+    display: flex !important;
+    margin-top: 0.2rem !important;
+  }
+
+  .view-mode-toggle .btn {
+    flex: 1 !important;
+    min-height: 38px !important;
+    justify-content: center !important;
+  }
+
+  /* 6. TABLE & MOBILE CARDS */
+  .table-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  .rab-cards-mobile-view {
+    padding: 0.4rem 0 !important;
+    width: 100% !important;
+    gap: 0.9rem !important;
+  }
+
+  .rab-mobile-card {
+    padding: 0.85rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .m-card-inputs-grid {
+    grid-template-columns: 1fr 1.2fr !important;
+    gap: 0.5rem !important;
+    width: 100% !important;
+  }
+
+  .m-card-inputs-grid input {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 7. BOTTOM PROJECT INFO & REKAP */
+  .project-params-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    width: 100% !important;
+  }
+
+  .params-card {
+    padding: 1.1rem 0.9rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .params-card .form-row-2 {
+    grid-template-columns: 1fr !important;
+    gap: 0.65rem !important;
+  }
+
+  /* 8. TAB 2: VOLUME CALCULATOR CARDS */
+  .volume-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    width: 100% !important;
+  }
+
+  .calc-tool-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .calc-tool-card .form-row-2,
+  .calc-tool-card .form-row-3 {
+    grid-template-columns: 1fr !important;
+    gap: 0.55rem !important;
+    width: 100% !important;
+  }
+
+  .calc-tool-card input {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .calc-result-box .btn {
+    min-height: 44px !important;
+    font-size: 0.88rem !important;
+  }
+
+  /* 9. TAB 3: ESTIMATOR CEPAT */
+  .grade-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem !important;
+    width: 100% !important;
+  }
+
+  .quick-cost-input-box {
+    padding: 1rem 0.85rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .quick-cost-input-box .form-row-2 {
+    grid-template-columns: 1fr !important;
+    gap: 0.65rem !important;
+  }
+
+  /* 10. TAB 4: KATALOG AHSP */
+  .catalog-filters-bar {
+    flex-direction: column !important;
+    gap: 0.6rem !important;
+    width: 100% !important;
+  }
+
+  .catalog-filters-bar .search-box {
+    width: 100% !important;
+  }
+
+  .catalog-filters-bar select {
+    width: 100% !important;
+  }
+
+  .catalog-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem !important;
+    width: 100% !important;
+  }
+
+  .catalog-card {
+    padding: 1rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 11. TAB 5: RINGKASAN & CHART */
+  .rekap-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    width: 100% !important;
+  }
+
+  .rekap-card {
+    padding: 1rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .chart-wrapper {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  .chart-wrapper canvas {
+    max-width: 250px !important;
+    height: auto !important;
+  }
+
+  /* 12. FIXED MOBILE BOTTOM BAR */
+  .mobile-bottom-bar {
+    display: flex !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: rgba(17, 24, 39, 0.98) !important;
+    backdrop-filter: blur(16px) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+    padding: 0.6rem 0.85rem !important;
+    padding-bottom: max(0.6rem, env(safe-area-inset-bottom, 0.6rem)) !important;
+    z-index: 500 !important;
+    box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.55) !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 0.6rem !important;
+  }
+
+  .mobile-bottom-total {
+    display: flex !important;
+    flex-direction: column !important;
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+  }
+
+  .mobile-bottom-total .m-lbl {
+    font-size: 0.65rem !important;
+    color: var(--text-muted) !important;
+    font-weight: 700 !important;
+  }
+
+  .mobile-bottom-total .m-val {
+    font-size: 0.98rem !important;
+    font-weight: 800 !important;
+    color: var(--accent) !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .mobile-bottom-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.45rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  .mobile-bottom-actions .btn {
+    padding: 0.45rem 0.7rem !important;
+    font-size: 0.8rem !important;
+    min-height: 38px !important;
+  }
+
+  /* Hide bottom bar when modal is open so it NEVER covers modal buttons */
+  body.modal-open .mobile-bottom-bar,
+  .modal-backdrop.active ~ .mobile-bottom-bar {
+    display: none !important;
+  }
+
+  /* 13. MODALS: BOTTOM SHEET FOR MOBILE, GUARANTEED ACCESSIBLE BUTTONS */
+  .modal-backdrop {
+    padding: 0 !important;
+    align-items: flex-end !important;
+    z-index: 3000 !important;
+  }
+
+  .modal-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 90vh !important;
+    border-radius: 20px 20px 0 0 !important;
+    padding: 1.25rem 1rem calc(1.2rem + env(safe-area-inset-bottom, 0.6rem)) 1rem !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.7) !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+  }
+
+  .modal-box .form-row-2 {
+    grid-template-columns: 1fr !important;
+    gap: 0.65rem !important;
+  }
+
+  /* Sticky Modal Action Buttons at bottom of modal so they are NEVER covered */
+  .modal-actions {
+    position: sticky !important;
+    bottom: 0 !important;
+    background: var(--bg-surface) !important;
+    padding: 0.85rem 0 0.2rem 0 !important;
+    margin-top: 1rem !important;
+    border-top: 1px solid var(--border-color) !important;
+    z-index: 20 !important;
+    display: flex !important;
+    gap: 0.6rem !important;
+    width: 100% !important;
+  }
+
+  .modal-actions .btn {
+    flex: 1 1 50% !important;
+    min-height: 44px !important;
+    font-size: 0.9rem !important;
+    justify-content: center !important;
+  }
+
+  .modal-search-row {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    width: 100% !important;
+  }
+
+  .modal-search-row input,
+  .modal-search-row select {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .picker-list {
+    max-height: 50vh !important;
+  }
+
+  .picker-item {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.6rem !important;
+  }
+
+  .picker-item .btn {
+    width: 100% !important;
+    min-height: 38px !important;
+    justify-content: center !important;
+  }
+
+  /* 14. PRINT PREVIEW MODAL ON MOBILE */
+  .print-preview-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 92vh !important;
+    padding: 0.85rem !important;
+    border-radius: 16px 16px 0 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .print-preview-header {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.7rem !important;
+  }
+
+  .print-preview-header h3 {
+    font-size: 1rem !important;
+    text-align: center !important;
+  }
+
+  .print-preview-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    width: 100% !important;
+  }
+
+  .print-preview-actions .btn {
+    width: 100% !important;
+    min-height: 42px !important;
+    justify-content: center !important;
+  }
+
+  .a4-sheet {
+    padding: 1rem 0.6rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .kpi-banner {
+    grid-template-columns: 1fr !important;
+  }
+
+  .header-right {
+    grid-template-columns: 1fr 1fr 1fr 38px !important;
+    gap: 0.35rem !important;
+  }
+
+  .header-right .btn {
+    padding: 0.45rem 0.2rem !important;
+    font-size: 0.74rem !important;
+  }
+
+  .header-right .btn svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+}

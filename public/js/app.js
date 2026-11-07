@@ -1652,10 +1652,14 @@ class RabApp {
 
   openModal(modalId) {
     document.getElementById(modalId)?.classList.add('active');
+    document.body.classList.add('modal-open');
   }
 
   closeModal(modalId) {
     document.getElementById(modalId)?.classList.remove('active');
+    if (!document.querySelector('.modal-backdrop.active')) {
+      document.body.classList.remove('modal-open');
+    }
   }
 
   showToast(message, type = 'success') {
