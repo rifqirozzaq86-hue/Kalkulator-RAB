@@ -1,0 +1,577 @@
+/* ===================================================================
+   V2.0 STYLING: REGIONS HSD, WBS HIERARCHY & DJBK CATALOG
+   =================================================================== */
+
+.badge-version {
+  font-size: 0.65rem;
+  background: linear-gradient(135deg, #10b981, #3b82f6);
+  color: #fff;
+  padding: 0.15rem 0.45rem;
+  border-radius: 999px;
+  font-weight: 800;
+  vertical-align: middle;
+  margin-left: 0.3rem;
+}
+
+.badge-count {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+
+.region-quick-select-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--bg-card);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  margin-left: 0.6rem;
+}
+
+.region-pin {
+  font-size: 0.95rem;
+}
+
+.header-wilayah-select {
+  background: transparent;
+  color: var(--text-main);
+  border: none;
+  font-size: 0.82rem;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+  max-width: 190px;
+}
+
+.header-wilayah-select option {
+  background: var(--bg-surface);
+  color: var(--text-main);
+}
+
+.region-factor-badge {
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 0.12rem 0.45rem;
+  border-radius: var(--radius-sm);
+}
+
+.badge-accent {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.select-wilayah-bold {
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--bg-input);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  padding: 0.65rem 0.9rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+}
+
+.select-wilayah-bold option {
+  background: var(--bg-surface);
+  color: var(--text-main);
+}
+
+.highlight-input-group {
+  background: rgba(16, 185, 129, 0.05);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: var(--radius-md);
+  padding: 0.8rem;
+}
+
+.d-flex { display: flex; }
+.justify-between { justify-content: space-between; }
+.align-center { align-items: center; }
+.mt-1 { margin-top: 0.5rem; }
+
+/* KPI Upah Region Card */
+.kpi-card-region {
+  border-left: 3px solid #3b82f6;
+}
+
+.kpi-upah-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.82rem;
+  margin: 0.35rem 0;
+}
+
+.kpi-upah-grid strong {
+  color: var(--text-main);
+}
+
+.u-lbl {
+  color: var(--text-muted);
+  display: inline-block;
+  width: 55px;
+}
+
+/* WBS Tree View */
+.wbs-container {
+  padding: 1.5rem;
+}
+
+.wbs-search-row {
+  margin-bottom: 1.2rem;
+}
+
+.wbs-search-row input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+}
+
+.wbs-tree-view {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  max-height: 650px;
+  overflow-y: auto;
+  padding-right: 0.4rem;
+}
+
+.wbs-node {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 0.9rem 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: all var(--transition-fast);
+}
+
+.wbs-node:hover {
+  border-color: rgba(16, 185, 129, 0.4);
+  background: var(--bg-card-hover);
+}
+
+.wbs-node.level-1 {
+  background: rgba(37, 99, 235, 0.12);
+  border-color: rgba(37, 99, 235, 0.3);
+  font-weight: 800;
+}
+
+.wbs-node.level-2 {
+  margin-left: 1rem;
+  border-left: 3px solid var(--accent);
+}
+
+.wbs-node.level-3 {
+  margin-left: 2.2rem;
+  border-left: 2px dashed rgba(255, 255, 255, 0.15);
+}
+
+.wbs-node-info h4 {
+  font-size: 0.92rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.wbs-code-tag {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.76rem;
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.wbs-node-desc {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+  line-height: 1.4;
+}
+
+/* HSD 35 Kab/Kota Tab */
+.hsd-region-overview-card {
+  margin-bottom: 1.2rem;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(16, 185, 129, 0.08));
+  border: 1px solid rgba(37, 99, 235, 0.25);
+}
+
+.hsd-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+
+.hsd-stat-box {
+  background: var(--bg-card);
+  padding: 1rem 1.2rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  position: relative;
+}
+
+.hsd-stat-box h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin: 0.2rem 0;
+}
+
+.hsd-stat-box h4 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin: 0.2rem 0;
+}
+
+.hsd-lbl {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.hsd-sub {
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.badge-factor {
+  display: inline-block;
+  background: #2563eb;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.hsd-table-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.hsd-category-pills {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.pill-btn {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.pill-btn:hover {
+  color: var(--text-main);
+  border-color: var(--text-muted);
+}
+
+.pill-btn.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* Pagination Bar */
+.pagination-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.page-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+}
+
+.page-btn.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  font-weight: 800;
+}
+
+
+
+/* ===================================================================
+   HEADER LAYOUT CLEANUP & POLISH
+   =================================================================== */
+.app-header {
+  padding: 0.65rem 1.4rem;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  min-height: 64px;
+}
+
+.header-left {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.brand-icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+}
+
+.brand-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  line-height: 1.15;
+}
+
+.brand-subtitle {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+  margin-top: 2px;
+}
+
+.header-center {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1 1 auto;
+  justify-content: center;
+  min-width: 0;
+}
+
+.project-selector-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: var(--bg-card);
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  max-width: 340px;
+  min-width: 0;
+}
+
+.project-select {
+  max-width: 190px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.region-quick-select-wrapper {
+  margin-left: 0;
+  background: var(--bg-card);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-shrink: 0;
+}
+
+.header-wilayah-select {
+  max-width: 180px;
+  font-size: 0.83rem;
+  font-weight: 700;
+  color: var(--text-main);
+  text-overflow: ellipsis;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.header-right .btn {
+  padding: 0.45rem 0.85rem;
+  font-size: 0.84rem;
+  gap: 0.45rem;
+}
+
+#btnThemeToggle {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+#btnThemeToggle:hover {
+  color: var(--text-main);
+  border-color: var(--accent);
+}
+
+/* Responsiveness on tablet & compact desktop */
+@media (max-width: 1180px) {
+  .brand-subtitle {
+    display: none;
+  }
+  .project-select {
+    max-width: 140px;
+  }
+  .header-wilayah-select {
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 900px) {
+  .project-label {
+    display: none;
+  }
+  .header-right .btn span {
+    display: none;
+  }
+  .header-right .btn {
+    padding: 0.45rem 0.6rem;
+  }
+}
+
+
+/* ===================================================================
+   CALCULATOR CARDS & FORM GRID POLISH
+   =================================================================== */
+.volume-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+.calc-tool-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.calc-tool-card .form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  min-width: 0;
+}
+
+.calc-tool-card .form-group {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.calc-tool-card .form-group label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.calc-tool-card input[type="number"],
+.calc-tool-card input[type="text"],
+.calc-tool-card select {
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--radius-md);
+  font-size: 0.88rem;
+}
+
+.calc-tool-card .form-row-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.calc-tool-card .form-row-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.calc-result-box {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-sizing: border-box;
+}
+
+.calc-result-box .btn {
+  width: 100%;
+  justify-content: center;
+  margin-top: 0.4rem;
+  font-size: 0.84rem;
+  padding: 0.55rem 1rem;
+}

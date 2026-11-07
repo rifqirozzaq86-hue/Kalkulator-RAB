@@ -1,0 +1,408 @@
+[
+  {
+    "kode": "1.0",
+    "uraian": "Pembangunan Rumah 2 Lantai",
+    "keterangan": "Keseluruhan pekerjaan pembangunan rumah 2 lantai dari tahap persiapan hingga serah terima.",
+    "level": 2,
+    "parentKode": null
+  },
+  {
+    "kode": "1.1",
+    "uraian": "Pekerjaan Persiapan",
+    "keterangan": "Menyiapkan lokasi, tenaga kerja, peralatan, material, serta fasilitas pendukung sebelum pekerjaan utama dimulai.",
+    "level": 2,
+    "parentKode": "1.0"
+  },
+  {
+    "kode": "1.1.1",
+    "uraian": "Pembersihan dan pematangan lahan",
+    "keterangan": "Membersihkan area proyek dari semak, sampah, dan material pengganggu serta meratakan area kerja sesuai kebutuhan.",
+    "level": 3,
+    "parentKode": "1.1"
+  },
+  {
+    "kode": "1.1.2",
+    "uraian": "Pengukuran dan pemasangan bouwplank",
+    "keterangan": "Menentukan titik dan elevasi bangunan kemudian memasang bouwplank sebagai acuan posisi dan ukuran bangunan.",
+    "level": 3,
+    "parentKode": "1.1"
+  },
+  {
+    "kode": "1.1.3",
+    "uraian": "Mobilisasi tenaga kerja, alat, dan material",
+    "keterangan": "Mendatangkan tenaga kerja, alat kerja, dan material ke lokasi proyek sesuai kebutuhan pelaksanaan.",
+    "level": 3,
+    "parentKode": "1.1"
+  },
+  {
+    "kode": "1.1.4",
+    "uraian": "Fasilitas sementara dan K3",
+    "keterangan": "Menyediakan fasilitas sementara proyek serta menerapkan perlengkapan dan prosedur keselamatan dan kesehatan kerja.",
+    "level": 3,
+    "parentKode": "1.1"
+  },
+  {
+    "kode": "1.2",
+    "uraian": "Pekerjaan Tanah",
+    "keterangan": "Melaksanakan pekerjaan tanah untuk menyiapkan dasar dan elevasi yang diperlukan bagi struktur bangunan.",
+    "level": 2,
+    "parentKode": "1.0"
+  },
+  {
+    "kode": "1.2.1",
+    "uraian": "Penggalian tanah pondasi",
+    "keterangan": "Menggali tanah sesuai dimensi, kedalaman, dan elevasi pondasi yang telah ditentukan.",
+    "level": 3,
+    "parentKode": "1.2"
+  },
+  {
+    "kode": "1.2.2",
+    "uraian": "Pengurugan kembali",
+    "keterangan": "Mengembalikan tanah hasil galian atau material urugan pada area sekitar pondasi setelah pekerjaan struktur selesai.",
+    "level": 3,
+    "parentKode": "1.2"
+  },
+  {
+    "kode": "1.2.3",
+    "uraian": "Pemadatan tanah",
+    "keterangan": "Memadatkan tanah/urugan secara bertahap untuk memperoleh kepadatan dan kestabilan tanah yang sesuai.",
+    "level": 3,
+    "parentKode": "1.2"
+  },
+  {
+    "kode": "1.3",
+    "uraian": "Pekerjaan Pondasi",
+    "keterangan": "Membangun elemen pondasi sebagai struktur penyalur beban bangunan ke tanah.",
+    "level": 2,
+    "parentKode": "1.0"
+  },
+  {
+    "kode": "1.3.1",
+    "uraian": "Lantai kerja",
+    "keterangan": "Membuat lapisan dasar beton kurus sebagai alas pondasi agar permukaan kerja rata dan bersih.",
+    "level": 3,
+    "parentKode": "1.3"
+  },
+  {
+    "kode": "1.3.2",
+    "uraian": "Pondasi batu kali",
+    "keterangan": "Membangun pondasi batu kali sesuai ukuran dan elevasi untuk menopang dinding serta meneruskan beban ke tanah.",
+    "level": 3,
+    "parentKode": "1.3"
+  },
+  {
+    "kode": "1.3.3",
+    "uraian": "Pondasi telapak/footplat",
+    "keterangan": "Membuat pondasi telapak/footplat untuk menyalurkan beban kolom ke tanah pada titik-titik pondasi.",
+    "level": 3,
+    "parentKode": "1.3"
+  },
+  {
+    "kode": "1.3.4",
+    "uraian": "Pembesian, bekisting, dan pengecoran pondasi",
+    "keterangan": "Memasang tulangan dan bekisting kemudian melakukan pengecoran elemen pondasi sesuai gambar kerja.",
+    "level": 3,
+    "parentKode": "1.3"
+  },
+  {
+    "kode": "1.4",
+    "uraian": "Struktur Lantai 1",
+    "keterangan": "Mengerjakan struktur utama lantai 1 yang terdiri dari sloof, kolom, dan balok.",
+    "level": 2,
+    "parentKode": "1.0"
+  },
+  {
+    "kode": "1.4.1",
+    "uraian": "Sloof",
+    "keterangan": "Membuat sloof beton bertulang sebagai pengikat pondasi dan penopang dinding serta penghubung antarpondasi.",
+    "level": 3,
+    "parentKode": "1.4"
+  },
+  {
+    "kode": "1.4.2",
+    "uraian": "Kolom lantai 1",
+    "keterangan": "Mengerjakan kolom beton bertulang lantai 1 sebagai elemen vertikal utama penahan beban.",
+    "level": 3,
+    "parentKode": "1.4"
+  },
+  {
+    "kode": "1.4.3",
+    "uraian": "Balok lantai 1",
+    "keterangan": "Mengerjakan balok beton bertulang lantai 1 sebagai elemen horizontal pengikat dan penyalur beban.",
+    "level": 3,
+    "parentKode": "1.4"
+  },
+  {
+    "kode": "1.5",
+    "uraian": "Struktur Lantai 2",
+    "keterangan": "Mengerjakan struktur utama lantai 2 termasuk kolom, balok, dan plat lantai.",
+    "level": 2,
+    "parentKode": "1.0"
+  },
+  {
+    "kode": "1.5.1",
+    "uraian": "Kolom lantai 2",
+    "keterangan": "Membuat kolom beton bertulang lantai 2 sebagai kelanjutan struktur vertikal dari lantai 1.",
+    "level": 3,
+    "parentKode": "1.5"
+  },
+  {
+    "kode": "1.5.2",
+    "uraian": "Balok lantai 2",
+    "keterangan": "Membuat balok beton bertulang lantai 2 sebagai penopang dan pengikat struktur lantai.",
+    "level": 3,
+    "parentKode": "1.5"
+  },
+  {
+    "kode": "1.5.3",
+    "uraian": "Plat lantai",
+    "keterangan": "Membuat plat lantai beton bertulang sebagai bidang lantai yang menyalurkan beban ke balok dan kolom.",
+    "level": 3,
+    "parentKode": "1.5"
+  },
+  {
+    "kode": "1.6",
+    "uraian": "Struktur Atap",
+    "keterangan": "Mengerjakan struktur dan penutup atap serta plafon bangunan.",
+    "level": 2,
+    "parentKode": "1.0"
+  },
+  {
+    "kode": "1.6.1",
+    "uraian": "Ring balok",
+    "keterangan": "Membuat ring balok sebagai pengikat bagian atas kolom dan tumpuan struktur atap.",
+    "level": 3,
+    "parentKode": "1.6"
+  },
+  {
+    "kode": "1.6.2",
+    "uraian": "Rangka atap",
+    "keterangan": "Memasang rangka atap sesuai bentuk dan kemiringan atap yang direncanakan.",
+    "level": 3,
+    "parentKode": "1.6"
+  },
+  {
+    "kode": "1.6.3",
+    "uraian": "Penutup atap, nok, dan talang",
+    "keterangan": "Memasang penutup atap beserta nok dan talang untuk melindungi bangunan dari cuaca dan mengalirkan air hujan.",
+    "level": 3,
+    "parentKode": "1.6"
+  },
+  {
+    "kode": "1.6.4",
+    "uraian": "Plafon",
+    "keterangan": "Memasang rangka dan penutup plafon untuk membentuk batas ruang bagian atas dan merapikan tampilan interior.",
+    "level": 3,
+    "parentKode": "1.6"
+  },
+  {
+    "kode": "1.7",
+    "uraian": "Pekerjaan Dinding",
+    "keterangan": "Mengerjakan elemen pembatas ruang dan bukaan bangunan pada lantai 1 dan 2.",
+    "level": 2,
+    "parentKode": "1.0"
+  },
+  {
+    "kode": "1.7.1",
+    "uraian": "Pemasangan dinding lantai 1 dan 2",
+    "keterangan": "Memasang dinding pada lantai 1 dan 2 sesuai layout, ukuran, serta posisi ruang pada gambar kerja.",
+    "level": 3,
+    "parentKode": "1.7"
+  },
+  {
+    "kode": "1.7.2",
+    "uraian": "Kusen, pintu, dan jendela",
+    "keterangan": "Memasang kusen beserta pintu dan jendela sebagai elemen bukaan dan akses bangunan.",
+    "level": 3,
+    "parentKode": "1.7"
+  },
+  {
+    "kode": "1.7.3",
+    "uraian": "Plesteran dan acian",
+    "keterangan": "Melakukan plesteran untuk meratakan permukaan dinding kemudian acian untuk menghasilkan permukaan yang siap difinishing.",
+    "level": 3,
+    "parentKode": "1.7"
+  },
+  {
+    "kode": "1.8",
+    "uraian": "Pekerjaan Tangga",
+    "keterangan": "Mengerjakan struktur tangga sebagai penghubung vertikal antara lantai 1 dan lantai 2.",
+    "level": 2,
+    "parentKode": "1.0"
+  },
+  {
+    "kode": "1.8.1",
+    "uraian": "Struktur dan pembesian tangga",
+    "keterangan": "Menyiapkan struktur dan tulangan tangga sesuai dimensi, kemiringan, serta detail konstruksi.",
+    "level": 3,
+    "parentKode": "1.8"
+  },
+  {
+    "kode": "1.8.2",
+    "uraian": "Bekisting dan pengecoran tangga",
+    "keterangan": "Memasang bekisting dan melakukan pengecoran tangga hingga membentuk struktur tangga yang direncanakan.",
+    "level": 3,
+    "parentKode": "1.8"
+  },
+  {
+    "kode": "1.8.3",
+    "uraian": "Finishing dan railing",
+    "keterangan": "Menyelesaikan permukaan tangga dan memasang railing sebagai pengaman pengguna.",
+    "level": 3,
+    "parentKode": "1.8"
+  },
+  {
+    "kode": "1.9",
+    "uraian": "Lantai dan Finishing",
+    "keterangan": "Mengerjakan penutup lantai dan pekerjaan finishing untuk memperoleh hasil akhir bangunan.",
+    "level": 2,
+    "parentKode": "1.0"
+  },
+  {
+    "kode": "1.9.1",
+    "uraian": "Pekerjaan lantai dan keramik",
+    "keterangan": "Memasang keramik atau material penutup lantai pada area yang ditentukan sesuai pola dan elevasi.",
+    "level": 3,
+    "parentKode": "1.9"
+  },
+  {
+    "kode": "1.9.2",
+    "uraian": "Pengecatan interior dan eksterior",
+    "keterangan": "Melakukan pengecatan permukaan interior dan eksterior setelah permukaan siap untuk menghasilkan perlindungan dan tampilan akhir.",
+    "level": 3,
+    "parentKode": "1.9"
+  },
+  {
+    "kode": "1.9.3",
+    "uraian": "Finishing pintu, jendela, dan plafon",
+    "keterangan": "Melakukan finishing pada pintu, jendela, dan plafon agar seluruh elemen memiliki tampilan dan kualitas akhir yang sesuai.",
+    "level": 3,
+    "parentKode": "1.9"
+  },
+  {
+    "kode": "1.10",
+    "uraian": "Plumbing dan Sanitasi",
+    "keterangan": "Memasang sistem perpipaan air bersih, air kotor, air hujan, serta perlengkapan sanitasi.",
+    "level": 2,
+    "parentKode": "1.0"
+  },
+  {
+    "kode": "1.10.1",
+    "uraian": "Instalasi air bersih",
+    "keterangan": "Memasang jaringan pipa distribusi air bersih dari sumber air menuju titik penggunaan.",
+    "level": 3,
+    "parentKode": "1.10"
+  },
+  {
+    "kode": "1.10.2",
+    "uraian": "Instalasi air kotor dan air hujan",
+    "keterangan": "Memasang jaringan pembuangan air kotor dan air hujan menuju saluran pembuangan yang direncanakan.",
+    "level": 3,
+    "parentKode": "1.10"
+  },
+  {
+    "kode": "1.10.3",
+    "uraian": "Sanitair dan septic tank",
+    "keterangan": "Memasang perlengkapan sanitair dan membangun/memasang septic tank sesuai kebutuhan bangunan.",
+    "level": 3,
+    "parentKode": "1.10"
+  },
+  {
+    "kode": "1.11",
+    "uraian": "Instalasi Listrik",
+    "keterangan": "Mengerjakan sistem kelistrikan bangunan dari jalur kabel hingga perlengkapan dan pengujian.",
+    "level": 2,
+    "parentKode": "1.0"
+  },
+  {
+    "kode": "1.11.1",
+    "uraian": "Conduit dan kabel",
+    "keterangan": "Memasang conduit dan menarik kabel listrik sesuai jalur serta pembagian sirkuit yang direncanakan.",
+    "level": 3,
+    "parentKode": "1.11"
+  },
+  {
+    "kode": "1.11.2",
+    "uraian": "Panel, saklar, dan stop kontak",
+    "keterangan": "Memasang panel listrik, saklar, dan stop kontak pada lokasi yang telah ditentukan.",
+    "level": 3,
+    "parentKode": "1.11"
+  },
+  {
+    "kode": "1.11.3",
+    "uraian": "Lampu dan pengujian instalasi",
+    "keterangan": "Memasang lampu kemudian menguji fungsi dan keamanan instalasi listrik.",
+    "level": 3,
+    "parentKode": "1.11"
+  },
+  {
+    "kode": "1.12",
+    "uraian": "Pekerjaan Eksterior",
+    "keterangan": "Mengerjakan area luar bangunan yang meliputi halaman, carport, pagar, dan drainase.",
+    "level": 2,
+    "parentKode": "1.0"
+  },
+  {
+    "kode": "1.12.1",
+    "uraian": "Halaman dan carport",
+    "keterangan": "Mengerjakan permukaan halaman dan carport sesuai elevasi, fungsi, dan material yang direncanakan.",
+    "level": 3,
+    "parentKode": "1.12"
+  },
+  {
+    "kode": "1.12.2",
+    "uraian": "Pagar dan drainase",
+    "keterangan": "Membangun pagar sebagai pembatas area serta drainase untuk mengalirkan air permukaan.",
+    "level": 3,
+    "parentKode": "1.12"
+  },
+  {
+    "kode": "1.13",
+    "uraian": "Pekerjaan Akhir",
+    "keterangan": "Melaksanakan pekerjaan akhir, pemeriksaan, pengujian, dokumentasi, dan serah terima bangunan.",
+    "level": 2,
+    "parentKode": "1.0"
+  },
+  {
+    "kode": "1.13.1",
+    "uraian": "Pembersihan bangunan",
+    "keterangan": "Membersihkan seluruh area dan bagian bangunan dari sisa material, debu, dan kotoran pekerjaan.",
+    "level": 3,
+    "parentKode": "1.13"
+  },
+  {
+    "kode": "1.13.2",
+    "uraian": "Pemeriksaan dan perbaikan",
+    "keterangan": "Memeriksa hasil pekerjaan dan memperbaiki bagian yang belum sesuai dengan gambar, spesifikasi, atau standar mutu.",
+    "level": 3,
+    "parentKode": "1.13"
+  },
+  {
+    "kode": "1.13.3",
+    "uraian": "Pengujian utilitas dan dokumentasi",
+    "keterangan": "Menguji fungsi utilitas bangunan dan menyiapkan dokumentasi hasil pekerjaan sebagai bagian dari penyelesaian proyek.",
+    "level": 3,
+    "parentKode": "1.13"
+  },
+  {
+    "kode": "1.13.4",
+    "uraian": "Serah terima bangunan",
+    "keterangan": "Melaksanakan pemeriksaan akhir dan serah terima bangunan setelah seluruh pekerjaan dinyatakan selesai.",
+    "level": 3,
+    "parentKode": "1.13"
+  },
+  {
+    "kode": "1.1 Persiapan",
+    "uraian": "1.2 Tanah",
+    "keterangan": "1.6 Atap",
+    "level": 2,
+    "parentKode": "1.0"
+  },
+  {
+    "kode": "1.8 Tangga",
+    "uraian": "1.9 Finishing",
+    "keterangan": "1.13 Akhir",
+    "level": 2,
+    "parentKode": "1.0"
+  }
+]

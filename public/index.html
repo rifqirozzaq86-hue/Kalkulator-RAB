@@ -1,0 +1,1257 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Kalkulator RAB Bangunan Profesional Terpadu berbasis DJBK No. 47 Tahun 2026 Cipta Karya, HSD 35 Kabupaten/Kota Jawa Tengah 2026, dan Standar WBS.">
+  <meta name="author" content="RABPro Master">
+  <title>Kalkulator RAB Pro Master - Standar DJBK 2026 & HSD Jawa Tengah</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style_v2.css">
+</head>
+
+<body class="theme-dark">
+  <!-- APP CONTAINER -->
+  <div id="app" class="app-layout">
+
+    <!-- TOP NAVIGATION BAR -->
+    <header class="app-header">
+      <div class="header-left">
+        <div class="brand">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 21h18M5 21V7l8-4v18M13 11l6-3v13M9 9v.01M9 12v.01M9 15v.01M9 18v.01" />
+            </svg>
+          </div>
+          <div>
+            <h1 class="brand-title">RAB<span class="text-accent">Pro</span> Master <span
+                class="badge-version">v2.0</span></h1>
+            <p class="brand-subtitle">Standar DJBK PUPR & HSD Jateng</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-center">
+        <!-- Project Selector & Region Selector -->
+        <div class="project-selector-wrapper">
+          <span class="project-label">Proyek:</span>
+          <select id="projectSelect" class="project-select" aria-label="Pilih Proyek">
+            <!-- Dynamic options -->
+          </select>
+          <button id="btnNewProject" class="btn btn-secondary btn-sm" title="Buat Proyek Baru">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 5v14M5 12h14" />
+            </svg>
+            Baru
+          </button>
+        </div>
+
+        <div class="region-quick-select-wrapper">
+          <span class="region-pin">📋</span>
+          <select id="headerWilayahSelect" class="header-wilayah-select" title="Ubah Wilayah Acuan HSD">
+            <!-- Populated with 35 Kab/Kota Jawa Tengah -->
+          </select>
+          <span class="region-factor-badge" id="headerFactorBadge">1.05x</span>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <!-- Action Buttons -->
+        <button id="btnQuickSave" class="btn btn-primary" title="Simpan Perubahan (Ctrl+S)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z" />
+            <polyline points="17 21 17 13 7 13 7 21" />
+            <polyline points="7 3 7 8 15 8" />
+          </svg>
+          <span>Simpan</span>
+        </button>
+
+        <button id="btnExportCSV" class="btn btn-secondary" title="Download Format Excel / CSV">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          <span>Excel</span>
+        </button>
+
+        <button id="btnPrintPreview" class="btn btn-accent" title="Cetak Format Resmi RAB A4">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 6 2 18 2 18 9" />
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+            <rect x="6" y="14" width="12" height="8" />
+          </svg>
+          <span>Cetak</span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button id="btnThemeToggle" class="btn btn-icon" title="Ganti Mode Gelap / Terang">
+          <svg id="themeIconDark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- KPI STATS SUMMARY BAR -->
+    <section class="kpi-banner">
+      <div class="kpi-card highlight-card">
+        <div class="kpi-meta">
+          <span class="kpi-label">TOTAL ESTIMASI RAB</span>
+          <span class="kpi-tag" id="kpiTagWilayah">Kota Semarang (1.05x)</span>
+        </div>
+        <div class="kpi-value-lg" id="kpiGrandTotal">Rp 0</div>
+        <div class="kpi-terbilang" id="kpiTerbilang">Nol Rupiah</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-meta">
+          <span class="kpi-label">BIAYA PER M²</span>
+          <span class="kpi-badge" id="kpiLuasBadge">60 m²</span>
+        </div>
+        <div class="kpi-value" id="kpiPerMeter">Rp 0 / m²</div>
+        <span class="kpi-sub" id="kpiStandardGrade">Estimasi Standar Menengah</span>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-meta">
+          <span class="kpi-label">SUBTOTAL RIIL (HPP)</span>
+          <span class="kpi-badge neutral" id="kpiItemCount">0 Item</span>
+        </div>
+        <div class="kpi-value" id="kpiSubtotalRiil">Rp 0</div>
+        <span class="kpi-sub">Bahan & Tenaga Kerja Sesuai HSD</span>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-meta">
+          <span class="kpi-label">MARGIN & PAJAK</span>
+          <span class="kpi-tag" id="kpiMarginTaxTags">10% + 11% PPN</span>
+        </div>
+        <div class="kpi-value" id="kpiTotalMarginPajak">Rp 0</div>
+        <span class="kpi-sub">Jasa Pemborong, PPN & Cadangan</span>
+      </div>
+
+      <div class="kpi-card kpi-card-region">
+        <div class="kpi-meta">
+          <span class="kpi-label">HSD UPAH HARIAN</span>
+          <span class="kpi-badge" id="kpiCityName">Semarang</span>
+        </div>
+        <div class="kpi-upah-grid">
+          <div><span class="u-lbl">Tukang:</span> <strong id="kpiUpahTukang">Rp 141.750</strong></div>
+          <div><span class="u-lbl">Pekerja:</span> <strong id="kpiUpahPekerja">Rp 115.500</strong></div>
+        </div>
+        <span class="kpi-sub" id="kpiHsdSub">Standar HSD Jateng 2026</span>
+      </div>
+    </section>
+
+    <!-- MAIN INTERACTION TABS -->
+    <nav class="main-tabs" aria-label="Menu Tab Aplikasi">
+      <button class="tab-btn active" data-tab="tab-rab">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+          <polyline points="14 2 14 8 20 8" />
+          <line x1="16" y1="13" x2="8" y2="13" />
+          <line x1="16" y1="17" x2="8" y2="17" />
+        </svg>
+        Rincian Item RAB
+      </button>
+
+      <button class="tab-btn" data-tab="tab-ahsp-catalog">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+        </svg>
+        Katalog AHSP DJBK 2026 (1.932 Item)
+      </button>
+
+      <button class="tab-btn" data-tab="tab-wbs">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="6" y1="3" x2="6" y2="15" />
+          <circle cx="18" cy="6" r="3" />
+          <circle cx="6" cy="18" r="3" />
+          <path d="M18 9a9 9 0 0 1-9 9" />
+        </svg>
+        Hierarki WBS Konstruksi (58 Item)
+      </button>
+
+      <button class="tab-btn" data-tab="tab-hsd">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
+        HSD 35 Kab/Kota Jateng
+      </button>
+
+      <button class="tab-btn" data-tab="tab-volume-calc">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 2 7 12 12 22 7 12 2" />
+          <polyline points="2 17 12 22 22 17" />
+          <polyline points="2 12 12 17 22 12" />
+        </svg>
+        Kalkulator Volume
+      </button>
+
+      <button class="tab-btn" data-tab="tab-quick-cost">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="12" y1="1" x2="12" y2="23" />
+          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+        </svg>
+        Estimator Cepat / m²
+      </button>
+
+      <button class="tab-btn" data-tab="tab-rekap">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="20" x2="18" y2="10" />
+          <line x1="12" y1="20" x2="12" y2="4" />
+          <line x1="6" y1="20" x2="6" y2="14" />
+        </svg>
+        Rekapitulasi & Grafik
+      </button>
+    </nav>
+
+    <!-- CONTENT AREA -->
+    <main class="content-body">
+
+      <!-- ================= TAB 1: RINCIAN ITEM RAB ================= -->
+      <section id="tab-rab" class="tab-pane active">
+
+        <!-- Controls row: Filter, Search, Add Buttons -->
+        <div class="table-controls-bar">
+          <div class="controls-left">
+            <div class="search-box">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+              <input type="text" id="rabSearchInput" placeholder="Cari item pekerjaan (misal: sloof, cat, hebel)...">
+            </div>
+
+            <div class="filter-dropdown">
+              <select id="rabCategoryFilter" aria-label="Filter Berdasarkan Kategori">
+                <option value="ALL">Semua Kategori Pekerjaan</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="controls-right">
+            <button id="btnOpenAhspPicker" class="btn btn-accent-subtle">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12h14" />
+              </svg>
+              Pilih dari DJBK 2026
+            </button>
+            <button id="btnAddNewManualItem" class="btn btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+              Tambah Item Manual
+            </button>
+            <div class="view-mode-toggle" id="viewModeToggleGroup">
+              <button class="btn btn-sm btn-secondary active" id="btnViewTable" title="Tampilan Tabel Standar">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="3" y1="6" x2="21" y2="6" />
+                  <line x1="3" y1="12" x2="21" y2="12" />
+                  <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
+                <span class="btn-text-responsive">Tabel</span>
+              </button>
+              <button class="btn btn-sm btn-secondary" id="btnViewCard" title="Tampilan Kartu HP">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="7" height="7" />
+                  <rect x="14" y="3" width="7" height="7" />
+                  <rect x="14" y="14" width="7" height="7" />
+                  <rect x="3" y="14" width="7" height="7" />
+                </svg>
+                <span class="btn-text-responsive">Kartu HP</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAIN DYNAMIC TABLE & CARDS CONTAINER -->
+        <div class="table-card">
+          <!-- Mobile Cards View Container (Active on phone or when toggled) -->
+          <div id="rabCardsContainer" class="rab-cards-mobile-view hidden">
+            <!-- Dynamically populated via JS -->
+          </div>
+
+          <div class="table-responsive" id="rabTableWrapper">
+            <table class="rab-table" id="rabTable">
+              <thead>
+                <tr>
+                  <th style="width: 45px;">No</th>
+                  <th style="width: 100px;">Kode</th>
+                  <th style="width: 200px;">Kategori / Divisi</th>
+                  <th>Uraian Pekerjaan / Material</th>
+                  <th style="width: 100px; text-align: right;">Volume</th>
+                  <th style="width: 80px; text-align: center;">Satuan</th>
+                  <th style="width: 150px; text-align: right;">Harga Satuan (Rp)</th>
+                  <th style="width: 160px; text-align: right;">Subtotal (Rp)</th>
+                  <th style="width: 90px; text-align: center;">Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="rabTableBody">
+                <!-- Populated dynamically via JS -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Empty state -->
+          <div id="tableEmptyState" class="empty-state hidden">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
+            </svg>
+            <h3>Belum Ada Item Pekerjaan</h3>
+            <p>Klik tombol <strong>"Pilih dari DJBK 2026"</strong> atau <strong>"Tambah Item Manual"</strong> untuk
+              mulai menghitung RAB.</p>
+          </div>
+        </div>
+
+        <!-- BOTTOM PROJECT PARAMETERS & CALCULATION SUMMARY -->
+        <div class="project-params-grid">
+
+          <!-- Column 1: Info Proyek -->
+          <div class="params-card">
+            <h3 class="params-card-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+              Identitas Proyek & Lokasi
+            </h3>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="inpNamaProyek">Nama Proyek <span style="color:#ef4444;font-weight:700;">* (Wajib
+                    diisi)</span></label>
+                <input type="text" id="inpNamaProyek" placeholder="Nama proyek (Wajib diisi)" required>
+              </div>
+              <div class="form-group">
+                <label for="inpKlien">Nama Pemilik / Klien</label>
+                <input type="text" id="inpKlien" placeholder="Nama pemilik / klien">
+              </div>
+
+              <!-- Wilayah HSD Selector -->
+              <div class="form-group highlight-input-group">
+                <div class="d-flex justify-between align-center">
+                  <label for="inpWilayah"><strong>Wilayah Acuan HSD (Jawa Tengah 2026)</strong></label>
+                  <span class="badge-accent" id="badgeFaktorWilayah">Faktor: 1.05x</span>
+                </div>
+                <select id="inpWilayah" class="select-wilayah-bold">
+                  <!-- Populated dynamically with 35 Kab/Kota -->
+                </select>
+                <button type="button" class="btn btn-sm btn-accent-subtle mt-1" id="btnApplyWilayahPrices"
+                  title="Sesuaikan harga satuan seluruh item di proyek dengan faktor wilayah ini">
+                  ⚡ Sesuaikan Semua Harga Item ke Wilayah Ini
+                </button>
+              </div>
+
+              <div class="form-group">
+                <label for="inpLokasi">Alamat / Lokasi Lengkap</label>
+                <input type="text" id="inpLokasi" placeholder="Alamat / lokasi pekerjaan">
+              </div>
+              <div class="form-group">
+                <label for="inpKontraktor">Pelaksana / Kontraktor</label>
+                <input type="text" id="inpKontraktor" placeholder="Nama pelaksana / kontraktor">
+              </div>
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="inpLuasBangunan">Luas Bangunan (m²) <span style="color:#ef4444;font-weight:700;">* (Wajib
+                      diisi)</span></label>
+                  <input type="number" id="inpLuasBangunan" placeholder="Contoh: 60 (Wajib diisi)" min="1" step="0.5"
+                    required>
+                </div>
+                <div class="form-group">
+                  <label for="inpLuasTanah">Luas Tanah (m²) <span style="color:#ef4444;font-weight:700;">* (Wajib
+                      diisi)</span></label>
+                  <input type="number" id="inpLuasTanah" placeholder="Contoh: 90 (Wajib diisi)" min="1" step="0.5"
+                    required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inpTanggal">Tanggal RAB</label>
+                <input type="date" id="inpTanggal">
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Pengaturan Biaya Tambahan -->
+          <div class="params-card">
+            <h3 class="params-card-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="8" x2="12" y2="12" />
+                <line x1="12" y1="16" x2="12.01" y2="16" />
+              </svg>
+              Faktor Tambahan & Margin
+            </h3>
+
+            <div class="multiplier-slider-group">
+              <div class="slider-header">
+                <label for="rngMargin">Jasa Kontraktor / Keuntungan (%)</label>
+                <span class="slider-val" id="valMargin">10%</span>
+              </div>
+              <input type="range" id="rngMargin" min="0" max="25" step="0.5" value="10">
+              <p class="slider-hint">Standar industri konstruksi: 8% - 15%</p>
+            </div>
+
+            <div class="multiplier-slider-group">
+              <div class="slider-header">
+                <label for="rngContingency">Biaya Tak Terduga / Contingency (%)</label>
+                <span class="slider-val" id="valContingency">5%</span>
+              </div>
+              <input type="range" id="rngContingency" min="0" max="20" step="0.5" value="5">
+              <p class="slider-hint">Untuk antisipasi fluktuasi harga atau cuaca: 3% - 8%</p>
+            </div>
+
+            <div class="multiplier-slider-group">
+              <div class="slider-header">
+                <label for="rngPpn">Pajak Pertambahan Nilai / PPN (%)</label>
+                <span class="slider-val" id="valPpn">11%</span>
+              </div>
+              <input type="range" id="rngPpn" min="0" max="15" step="1" value="11">
+              <p class="slider-hint">Standar tarif PPN pemerintah Indonesia: 11%</p>
+            </div>
+
+            <div class="form-group" style="margin-top: 1rem;">
+              <label for="inpCatatan">Catatan / Syarat Khusus Proyek</label>
+              <textarea id="inpCatatan" rows="2"
+                placeholder="Contoh: Menggunakan acuan DJBK No. 47 Tahun 2026 dan HSD Jawa Tengah 2026..."></textarea>
+            </div>
+          </div>
+
+          <!-- Column 3: Rekapitulasi Finansial Terperinci -->
+          <div class="params-card summary-card">
+            <h3 class="params-card-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+              </svg>
+              Rekapitulasi Anggaran Akhir
+            </h3>
+
+            <div class="summary-breakdown">
+              <div class="summary-row">
+                <span>Subtotal Biaya Riil (Bahan & Upah HSD)</span>
+                <span class="amount" id="sumBiayaRiil">Rp 0</span>
+              </div>
+              <div class="summary-row">
+                <span id="labelSumMargin">Jasa Kontraktor (10%)</span>
+                <span class="amount" id="sumMargin">Rp 0</span>
+              </div>
+              <div class="summary-row">
+                <span id="labelSumContingency">Biaya Tak Terduga (5%)</span>
+                <span class="amount" id="sumContingency">Rp 0</span>
+              </div>
+              <div class="summary-row">
+                <span id="labelSumPpn">PPN (11%)</span>
+                <span class="amount" id="sumPpn">Rp 0</span>
+              </div>
+
+              <div class="summary-divider"></div>
+
+              <div class="summary-row grand-total-row">
+                <div>
+                  <div class="grand-label">TOTAL ESTIMASI RAB</div>
+                  <div class="grand-sub" id="grandSubAcuan">Acuan DJBK 2026 & HSD Jateng</div>
+                </div>
+                <span class="amount-grand" id="sumGrandTotal">Rp 0</span>
+              </div>
+
+              <div class="summary-row per-m2-row">
+                <span>Estimasi Biaya Bangunan / m²</span>
+                <span class="amount-m2" id="sumBiayaPerM2">Rp 0 / m²</span>
+              </div>
+            </div>
+
+            <div class="action-footer">
+              <button id="btnSaveBottom" class="btn btn-primary btn-block">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z" />
+                  <polyline points="17 21 17 13 7 13 7 21" />
+                  <polyline points="7 3 7 8 15 8" />
+                </svg>
+                Simpan Proyek RAB
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- ================= TAB 2: KATALOG AHSP DJBK 2026 (1.932 ITEM) ================= -->
+      <section id="tab-ahsp-catalog" class="tab-pane">
+        <div class="pane-header">
+          <div class="pane-header-left">
+            <h2>📖 Katalog Analisis Harga Satuan Pekerjaan (DJBK No. 47 Tahun 2026)</h2>
+            <p>Database resmi Ditjen Bina Konstruksi Kementerian PUPR Bidang Cipta Karya. Harga otomatis disesuaikan
+              dengan Wilayah HSD yang aktif (<strong id="catalogActiveWilayah">Kota Semarang</strong>).</p>
+          </div>
+          <div class="pane-header-right">
+            <span class="badge-count" id="catalogTotalCount">1.932 Item</span>
+          </div>
+        </div>
+
+        <div class="catalog-filters-bar">
+          <div class="search-box" style="flex: 1.5;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <input type="text" id="catalogSearchInput"
+              placeholder="Cari kode (misal: 1.1.1.1) atau nama (sloof, hebel, granit, genteng, cat)...">
+          </div>
+          <div class="filter-dropdown" style="flex: 1;">
+            <select id="catalogDivisiFilter" aria-label="Filter Divisi Pekerjaan">
+              <option value="ALL">Semua Divisi Pekerjaan (10 Divisi)</option>
+              <option value="DIVISI 1">DIVISI 1: Persiapan Lapangan / Site Work</option>
+              <option value="STRUKTUR">DIVISI 2: Pekerjaan Struktur (Beton, Baja, Pondasi)</option>
+              <option value="ARSITEKTUR">DIVISI 3: Pekerjaan Arsitektur (Dinding, Lantai, Atap, Pintu)</option>
+              <option value="LANSEKAP">DIVISI 4: Pekerjaan Lansekap</option>
+              <option value="MEKANIKAL">DIVISI 5: Pekerjaan Mekanikal & Elektrikal</option>
+              <option value="PLAMBING">DIVISI 6: Pekerjaan Plambing / Sanitasi</option>
+              <option value="JALAN">DIVISI 7: Jalan Pada Pemukiman</option>
+              <option value="DRAINASE">DIVISI 8: Pekerjaan Drainase</option>
+              <option value="PIPA LUAR">DIVISI 9: Jaringan Pipa Luar Gedung</option>
+              <option value="Risha">DIVISI 10: Sistem Struktur RISHA</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="catalog-grid" id="catalogCardsContainer">
+          <!-- Populated by JS -->
+        </div>
+
+        <div class="pagination-bar" id="catalogPagination">
+          <!-- Pagination buttons populated by JS -->
+        </div>
+      </section>
+
+      <!-- ================= TAB 3: STRUKTUR WBS KONSTRUKSI (58 HIERARKI) ================= -->
+      <section id="tab-wbs" class="tab-pane">
+        <div class="pane-header">
+          <div class="pane-header-left">
+            <h2>🏗️ Hierarki Work Breakdown Structure (WBS Standar Konstruksi)</h2>
+            <p>Struktur pembagian paket pekerjaan standar dari persiapan hingga serah terima untuk proyek konstruksi
+              rumah & gedung.</p>
+          </div>
+          <div class="pane-header-right">
+            <button class="btn btn-accent" onclick="app.applyWbsTemplate()">
+              + Terapkan Seluruh Item WBS ke RAB
+            </button>
+          </div>
+        </div>
+
+        <div class="wbs-container card">
+          <div class="wbs-search-row">
+            <input type="text" id="wbsSearchInput" placeholder="Cari elemen WBS (misal: 1.1, pondasi, struktur)..."
+              oninput="app.filterWbsTree()">
+          </div>
+          <div class="wbs-tree-view" id="wbsTreeContainer">
+            <!-- Populated by JS from data/wbs_tree.json -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TAB 4: HSD 35 KABUPATEN/KOTA JAWA TENGAH 2026 ================= -->
+      <section id="tab-hsd" class="tab-pane">
+        <div class="pane-header">
+          <div class="pane-header-left">
+            <h2>📋 Database Harga Satuan Dasar (HSD) 35 Kab/Kota Jawa Tengah</h2>
+            <p>Acuan harga dasar upah tenaga kerja, material bahan bangunan, dan sewa alat berat di 35 wilayah Jawa
+              Tengah tahun 2026.</p>
+          </div>
+          <div class="pane-header-right">
+            <select id="hsdViewerRegionSelect" class="select-wilayah-bold"
+              onchange="app.loadHsdRegionDetail(this.value)">
+              <!-- Populated by JS -->
+            </select>
+          </div>
+        </div>
+
+        <div class="hsd-region-overview-card card">
+          <div class="hsd-stats-grid">
+            <div class="hsd-stat-box">
+              <span class="hsd-lbl">Wilayah Terpilih:</span>
+              <h3 id="hsdStatRegionName">Kota Semarang</h3>
+              <span class="badge-factor" id="hsdStatFactor">Faktor: 1.05x</span>
+            </div>
+            <div class="hsd-stat-box">
+              <span class="hsd-lbl">Upah Tukang / Hari:</span>
+              <h4 id="hsdStatTukang">Rp 141.750</h4>
+              <span class="hsd-sub">Mandor: <strong id="hsdStatMandor">Rp 168.000</strong></span>
+            </div>
+            <div class="hsd-stat-box">
+              <span class="hsd-lbl">Upah Pekerja / Hari:</span>
+              <h4 id="hsdStatPekerja">Rp 115.500</h4>
+              <span class="hsd-sub">Kepala Tukang: <strong id="hsdStatKepala">Rp 152.250</strong></span>
+            </div>
+            <div class="hsd-stat-box">
+              <span class="hsd-lbl">Bahan Pokok (Semen / Pasir):</span>
+              <h4 id="hsdStatSemen">Rp 82.425 / zak</h4>
+              <span class="hsd-sub">Pasir: <strong id="hsdStatPasir">Rp 304.500 / m³</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mt-2">
+          <div class="hsd-table-header-row">
+            <h3>Daftar Lengkap Harga Satuan Dasar Bahan, Upah & Alat</h3>
+            <div class="hsd-category-pills" id="hsdCategoryPills">
+              <button class="pill-btn active" onclick="app.filterHsdCategory('ALL')">Semua</button>
+              <button class="pill-btn" onclick="app.filterHsdCategory('Bahan')">Bahan (103)</button>
+              <button class="pill-btn" onclick="app.filterHsdCategory('Upah')">Upah Tenaga (6)</button>
+              <button class="pill-btn" onclick="app.filterHsdCategory('Peralatan')">Peralatan (5)</button>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="rab-table">
+              <thead>
+                <tr>
+                  <th style="width: 50px;">No</th>
+                  <th style="width: 130px;">Kategori</th>
+                  <th>Uraian Material / Tenaga / Alat</th>
+                  <th style="width: 90px; text-align: center;">Satuan</th>
+                  <th style="width: 140px; text-align: right;">Harga Min</th>
+                  <th style="width: 140px; text-align: right;">Harga Maks</th>
+                  <th style="width: 150px; text-align: right;">Harga Tengah (Acuan)</th>
+                </tr>
+              </thead>
+              <tbody id="hsdDetailTableBody">
+                <!-- Populated by JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TAB 5: KALKULATOR VOLUME CEPAT ================= -->
+      <section id="tab-volume-calc" class="tab-pane">
+        <div class="pane-header">
+          <h2>📋 Kalkulator Bantu Hitung Volume Proyek</h2>
+          <p>Alat hitung praktis dimensi bangunan. Masukkan ukuran ruangan untuk mendapatkan volume akurat dan langsung
+            terapkan ke item RAB.</p>
+        </div>
+
+        <div class="volume-cards-grid">
+
+          <!-- Tool 1: Pasangan Dinding & Plesteran -->
+          <div class="calc-tool-card">
+            <div class="calc-tool-header">
+              <span class="calc-tool-icon">🧱</span>
+              <div>
+                <h3>Hitung Luas Dinding & Plesteran</h3>
+                <p>Otomatis kurangi luasan pintu & jendela</p>
+              </div>
+            </div>
+            <div class="form-grid">
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="vDindingKeliling">Total Panjang Dinding (m)</label>
+                  <input type="number" id="vDindingKeliling" placeholder="0" step="0.5" min="0">
+                </div>
+                <div class="form-group">
+                  <label for="vDindingTinggi">Tinggi Dinding (m)</label>
+                  <input type="number" id="vDindingTinggi" placeholder="0" step="0.1" min="0">
+                </div>
+              </div>
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="vDindingPintu">Pengurangan Pintu (m²)</label>
+                  <input type="number" id="vDindingPintu" placeholder="0" step="0.5" min="0">
+                </div>
+                <div class="form-group">
+                  <label for="vDindingJendela">Pengurangan Jendela (m²)</label>
+                  <input type="number" id="vDindingJendela" placeholder="0" step="0.5" min="0">
+                </div>
+              </div>
+            </div>
+            <div class="calc-result-box">
+              <div class="calc-res-item">
+                <span>Luas Pasangan Dinding:</span>
+                <strong id="resLuasDinding">0.00 m²</strong>
+              </div>
+              <div class="calc-res-item">
+                <span>Luas Plesteran (2 Sisi):</span>
+                <strong id="resLuasPlesteran">0.00 m²</strong>
+              </div>
+              <button class="btn btn-sm btn-accent mt-2" onclick="app.applyWallVolume()">
+                + Terapkan ke RAB (Dinding & Plesteran)
+              </button>
+            </div>
+          </div>
+
+          <!-- Tool 2: Pondasi Batu Kali -->
+          <div class="calc-tool-card">
+            <div class="calc-tool-header">
+              <span class="calc-tool-icon">⛏️</span>
+              <div>
+                <h3>Hitung Pondasi Batu Kali (Trapesium)</h3>
+                <p>Volume pondasi berdasarkan profil penampang</p>
+              </div>
+            </div>
+            <div class="form-grid">
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="vPondasiPanjang">Total Panjang Pondasi (m)</label>
+                  <input type="number" id="vPondasiPanjang" placeholder="0" step="0.5" min="0">
+                </div>
+                <div class="form-group">
+                  <label for="vPondasiTinggi">Tinggi Pondasi (m)</label>
+                  <input type="number" id="vPondasiTinggi" placeholder="0" step="0.05" min="0">
+                </div>
+              </div>
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="vPondasiLebarAtas">Lebar Atas Penampang (m)</label>
+                  <input type="number" id="vPondasiLebarAtas" placeholder="0" step="0.05" min="0">
+                </div>
+                <div class="form-group">
+                  <label for="vPondasiLebarBawah">Lebar Bawah Penampang (m)</label>
+                  <input type="number" id="vPondasiLebarBawah" placeholder="0" step="0.05" min="0">
+                </div>
+              </div>
+            </div>
+            <div class="calc-result-box">
+              <div class="calc-res-item">
+                <span>Volume Pasangan Batu Kali:</span>
+                <strong id="resVolumePondasi">0.00 m³</strong>
+              </div>
+              <div class="calc-res-item">
+                <span>Estimasi Galian Tanah (+20%):</span>
+                <strong id="resVolumeGalian">0.00 m³</strong>
+              </div>
+              <button class="btn btn-sm btn-accent mt-2" onclick="app.applyFoundationVolume()">
+                + Terapkan ke RAB (Pondasi & Galian)
+              </button>
+            </div>
+          </div>
+
+          <!-- Tool 3: Struktur Sloof / Kolom / Balok -->
+          <div class="calc-tool-card">
+            <div class="calc-tool-header">
+              <span class="calc-tool-icon">🏢</span>
+              <div>
+                <h3>Hitung Beton Sloof & Kolom</h3>
+                <p>Panjang lari dan volume cor beton</p>
+              </div>
+            </div>
+            <div class="form-grid">
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="vSloofPanjang">Total Panjang Sloof (m)</label>
+                  <input type="number" id="vSloofPanjang" placeholder="0" step="1" min="0">
+                </div>
+                <div class="form-group">
+                  <label for="vKolomJumlah">Jumlah Kolom x Tinggi (m)</label>
+                  <input type="number" id="vKolomJumlah" placeholder="0" step="1" min="0">
+                </div>
+              </div>
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="vDimensiLebar">Dimensi Lebar (cm)</label>
+                  <input type="number" id="vDimensiLebar" placeholder="0" step="1" min="0">
+                </div>
+                <div class="form-group">
+                  <label for="vDimensiTinggi">Dimensi Tinggi (cm)</label>
+                  <input type="number" id="vDimensiTinggi" placeholder="0" step="1" min="0">
+                </div>
+              </div>
+            </div>
+            <div class="calc-result-box">
+              <div class="calc-res-item">
+                <span>Total Panjang Lari Struktur:</span>
+                <strong id="resPanjangStruktur">0.00 m'</strong>
+              </div>
+              <div class="calc-res-item">
+                <span>Volume Cor Beton:</span>
+                <strong id="resVolumeBeton">0.00 m³</strong>
+              </div>
+              <button class="btn btn-sm btn-accent mt-2" onclick="app.applyStructureVolume()">
+                + Terapkan ke RAB (Sloof & Kolom)
+              </button>
+            </div>
+          </div>
+
+          <!-- Tool 4: Lantai, Plafon & Atap -->
+          <div class="calc-tool-card">
+            <div class="calc-tool-header">
+              <span class="calc-tool-icon">🏠</span>
+              <div>
+                <h3>Hitung Lantai, Plafon & Atap</h3>
+                <p>Koreksi sudut kemiringan atap genteng</p>
+              </div>
+            </div>
+            <div class="form-grid">
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="vRuangPanjang">Panjang Denah Bangunan (m)</label>
+                  <input type="number" id="vRuangPanjang" placeholder="0" step="0.5" min="0">
+                </div>
+                <div class="form-group">
+                  <label for="vRuangLebar">Lebar Denah Bangunan (m)</label>
+                  <input type="number" id="vRuangLebar" placeholder="0" step="0.5" min="0">
+                </div>
+              </div>
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="vOverstekAtap">Lebar Overstek / Tritisan (m)</label>
+                  <input type="number" id="vOverstekAtap" placeholder="0" step="0.1" min="0">
+                </div>
+                <div class="form-group">
+                  <label for="vSudutAtap">Sudut Kemiringan Atap (°)</label>
+                  <input type="number" id="vSudutAtap" placeholder="0" step="5" min="0">
+                </div>
+              </div>
+            </div>
+            <div class="calc-result-box">
+              <div class="calc-res-item">
+                <span>Luas Lantai / Plafon Bersih:</span>
+                <strong id="resLuasLantai">0.00 m²</strong>
+              </div>
+              <div class="calc-res-item">
+                <span>Luas Bidang Atap Miring (Cos):</span>
+                <strong id="resLuasAtap">0.00 m²</strong>
+              </div>
+              <button class="btn btn-sm btn-accent mt-2" onclick="app.applyFloorRoofVolume()">
+                + Terapkan ke RAB (Lantai, Plafon & Atap)
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= TAB 6: ESTIMATOR CEPAT / M² ================= -->
+      <section id="tab-quick-cost" class="tab-pane">
+        <div class="pane-header">
+          <h2>💡 Estimator Cepat Biaya Bangunan per Meter Persegi (m²)</h2>
+          <p>Gunakan acuan standar biaya konstruksi per m² untuk mendapatkan estimasi kasar awal sebelum membuat rincian
+            detail.</p>
+        </div>
+
+        <div class="quick-cost-container">
+          <div class="quick-cost-input-box card">
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="qcLuas">Rencana Luas Bangunan (m²)</label>
+                <input type="number" id="qcLuas" placeholder="Masukkan luas bangunan (m²)" min="10" step="5">
+              </div>
+              <div class="form-group">
+                <label for="qcLantai">Jumlah Lantai</label>
+                <select id="qcLantai">
+                  <option value="1">1 Lantai (Standar)</option>
+                  <option value="2">2 Lantai (+15% struktur beban)</option>
+                  <option value="3">3 Lantai (+25% pondasi cakar ayam/bore pile)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="grade-cards-grid">
+            <div class="grade-card" data-rate="3200000">
+              <div class="grade-badge">Ekonomis</div>
+              <h3 class="grade-title">Rumah Sederhana / Subsidi</h3>
+              <div class="grade-price">Rp 3.200.000 <span class="unit">/ m²</span></div>
+              <p class="grade-desc">Pondasi batu kali, bata ringan, atap baja ringan + spandek/genteng metal, keramik
+                40x40, cat standar.</p>
+              <div class="grade-total-box">
+                <span class="lbl">Perkiraan Biaya:</span>
+                <div class="val" id="qcTotalSederhana">Rp 0</div>
+              </div>
+            </div>
+
+            <div class="grade-card popular" data-rate="4200000">
+              <div class="popular-ribbon">Paling Populer</div>
+              <div class="grade-badge highlight">Standar Menengah</div>
+              <h3 class="grade-title">Rumah Minimalis Modern</h3>
+              <div class="grade-price">Rp 4.200.000 <span class="unit">/ m²</span></div>
+              <p class="grade-desc">Lantai granit 60x60, plafon gypsum hollow, genteng keramik/metal pasir, kusen
+                aluminium, sanitair Toto.</p>
+              <div class="grade-total-box">
+                <span class="lbl">Perkiraan Biaya:</span>
+                <div class="val text-accent" id="qcTotalMenengah">Rp 0</div>
+              </div>
+            </div>
+
+            <div class="grade-card" data-rate="6000000">
+              <div class="grade-badge">Premium</div>
+              <h3 class="grade-title">Rumah Mewah / Klasik</h3>
+              <div class="grade-price">Rp 6.000.000 <span class="unit">/ m²</span></div>
+              <p class="grade-desc">Marmer/granit slab impor, kayu jati/kamper oven, genteng kanmuri glazur, cat premium
+                Dulux, sanitary mewah.</p>
+              <div class="grade-total-box">
+                <span class="lbl">Perkiraan Biaya:</span>
+                <div class="val" id="qcTotalMewah">Rp 0</div>
+              </div>
+            </div>
+
+            <div class="grade-card" data-rate="4500000">
+              <div class="grade-badge">Komersial</div>
+              <h3 class="grade-title">Ruko / Kantor / Kos-kosan</h3>
+              <div class="grade-price">Rp 4.500.000 <span class="unit">/ m²</span></div>
+              <p class="grade-desc">Struktur bentang lebar, rolling door, lantai granit komersial, partisi gipsum ganda,
+                instalasi listrik besar.</p>
+              <div class="grade-total-box">
+                <span class="lbl">Perkiraan Biaya:</span>
+                <div class="val" id="qcTotalRuko">Rp 0</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TAB 7: REKAPITULASI & GRAFIK ================= -->
+      <section id="tab-rekap" class="tab-pane">
+        <div class="pane-header">
+          <h2>📊 Rekapitulasi & Komposisi Anggaran Proyek</h2>
+          <p>Analisis distribusi biaya konstruksi per kategori pekerjaan untuk pengendalian biaya yang lebih terarah.
+          </p>
+        </div>
+
+        <div class="rekap-grid">
+          <div class="card rekap-card">
+            <h3>Distribusi Biaya per Kategori Pekerjaan</h3>
+            <div id="categoryBreakdownList" class="category-breakdown-list">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <div class="card rekap-card">
+            <h3>Komposisi Finansial Proyek</h3>
+            <div class="chart-wrapper">
+              <canvas id="costDistributionCanvas" width="300" height="300"></canvas>
+            </div>
+            <div class="chart-legend" id="chartLegendContainer">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- ================= MODALS ================= -->
+
+  <!-- MODAL 1: TAMBAH ITEM MANUAL -->
+  <div id="modalItemManual" class="modal-backdrop">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="modalItemTitle">Tambah Item Pekerjaan Baru</h3>
+        <button class="modal-close" onclick="app.closeModal('modalItemManual')">&times;</button>
+      </div>
+      <form id="formManualItem" onsubmit="app.handleSaveManualItem(event)">
+        <input type="hidden" id="itemEditId" value="">
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="mItemKode">Kode AHSP / WBS</label>
+            <input type="text" id="mItemKode" placeholder="Contoh: 1.1.1.1 atau 1.2">
+          </div>
+          <div class="form-group">
+            <label for="mItemKategori">Kategori Pekerjaan *</label>
+            <select id="mItemKategori" required>
+              <option value="Persiapan lapangan/site work">Pekerjaan Persiapan</option>
+              <option value="PEKERJAAN STRUKTUR">Pekerjaan Struktur (Pondasi/Beton/Baja)</option>
+              <option value="PEKERJAAN ARSITEKTUR">Pekerjaan Arsitektur (Dinding/Lantai/Atap)</option>
+              <option value="PEKERJAAN PLAMBING">Pekerjaan Plambing & Sanitasi</option>
+              <option value="PEKERJAAN MEKANIKAL DAN ELEKTRIKAL">Pekerjaan Elektrikal & Listrik</option>
+              <option value="PEKERJAAN LANSEKAP">Pekerjaan Lansekap & Halaman</option>
+              <option value="DRAINASE">Pekerjaan Drainase</option>
+              <option value="Lain-lain">Lain-lain</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="mItemNama">Nama / Uraian Pekerjaan *</label>
+          <input type="text" id="mItemNama" placeholder="Contoh: Pasangan Granit 60x60" required>
+        </div>
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="mItemVolume">Volume <span style="color:#ef4444;font-weight:700;">* (Wajib diisi)</span></label>
+            <input type="number" id="mItemVolume" min="0.01" step="0.01" placeholder="Misal: 50" required>
+          </div>
+          <div class="form-group">
+            <label for="mItemSatuan">Satuan <span style="color:#ef4444;font-weight:700;">* (Wajib diisi)</span></label>
+            <select id="mItemSatuan" required>
+              <option value="m²">m² (Meter Persegi)</option>
+              <option value="m³">m³ (Meter Kubik)</option>
+              <option value="m'">m' (Meter Lari)</option>
+              <option value="unit">unit</option>
+              <option value="titik">titik</option>
+              <option value="kg">kg</option>
+              <option value="ls">ls (Lump Sum)</option>
+              <option value="buah">buah</option>
+              <option value="set">set</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="mItemHargaSatuan">Harga Satuan (Rp) *</label>
+          <input type="number" id="mItemHargaSatuan" min="0" step="500" placeholder="Contoh: 265000" required>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary" onclick="app.closeModal('modalItemManual')">Batal</button>
+          <button type="submit" class="btn btn-primary">Simpan ke RAB</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL 2: PICKER DARI KATALOG DJBK 2026 -->
+  <div id="modalAhspPicker" class="modal-backdrop">
+    <div class="modal-box modal-lg">
+      <div class="modal-header">
+        <div>
+          <h3>Pilih dari Katalog DJBK No. 47 Tahun 2026</h3>
+          <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 2px;">Harga otomatis disesuaikan dengan
+            Wilayah HSD yang aktif: <strong class="text-accent" id="pickerWilayahText">Kota Semarang (1.05x)</strong>
+          </p>
+        </div>
+        <button class="modal-close" onclick="app.closeModal('modalAhspPicker')">&times;</button>
+      </div>
+      <div class="modal-search-row">
+        <input type="text" id="pickerSearch" placeholder="Cari uraian atau kode pekerjaan..."
+          oninput="app.filterPickerItems()">
+        <select id="pickerCategoryFilter" onchange="app.filterPickerItems()">
+          <option value="ALL">Semua Divisi Pekerjaan</option>
+          <option value="DIVISI 1">DIVISI 1: Persiapan Lapangan</option>
+          <option value="STRUKTUR">DIVISI 2: Struktur (Beton, Baja, Pondasi)</option>
+          <option value="ARSITEKTUR">DIVISI 3: Arsitektur (Dinding, Lantai, Atap)</option>
+          <option value="PLAMBING">DIVISI 6: Plambing & Sanitasi</option>
+          <option value="MEKANIKAL">DIVISI 5: Mekanikal & Listrik</option>
+        </select>
+      </div>
+      <div class="picker-list" id="pickerItemList">
+        <!-- Populated by JS -->
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-secondary" onclick="app.closeModal('modalAhspPicker')">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 3: BUAT PROYEK BARU -->
+  <div id="modalNewProject" class="modal-backdrop">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>Buat Proyek RAB Baru</h3>
+        <button class="modal-close" onclick="app.closeModal('modalNewProject')">&times;</button>
+      </div>
+      <form id="formNewProject" onsubmit="app.handleCreateNewProject(event)">
+        <div class="form-group">
+          <label for="npNama">Nama Proyek <span style="color:#ef4444;font-weight:700;">* (Wajib diisi)</span></label>
+          <input type="text" id="npNama" placeholder="Contoh: Pembangunan Rumah 2 Lantai" required>
+        </div>
+        <div class="form-group">
+          <label for="npKlien">Nama Klien / Pemilik</label>
+          <input type="text" id="npKlien" placeholder="Nama Klien / Pemilik">
+        </div>
+        <div class="form-group">
+          <label for="npWilayah">Wilayah Acuan HSD (Jawa Tengah 2026) <span style="color:#ef4444;font-weight:700;">*
+              (Wajib diisi)</span></label>
+          <select id="npWilayah" required>
+            <!-- Populated by JS with 35 Kab/Kota -->
+          </select>
+        </div>
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="npLuas">Luas Bangunan (m²) <span style="color:#ef4444;font-weight:700;">* (Wajib
+                diisi)</span></label>
+            <input type="number" id="npLuas" placeholder="Contoh: 60 (Wajib diisi)" min="1" required>
+          </div>
+          <div class="form-group">
+            <label for="npLuasTanah">Luas Tanah (m²) <span style="color:#ef4444;font-weight:700;">* (Wajib
+                diisi)</span></label>
+            <input type="number" id="npLuasTanah" placeholder="Contoh: 90 (Wajib diisi)" min="1" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="npTemplate">Pilihan Template Awal</label>
+          <select id="npTemplate">
+            <option value="kosong" selected>Mulai dari Tabel Kosong (Fresh)</option>
+            <option value="standar">Template Lengkap WBS &amp; DJBK 2026</option>
+          </select>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary" onclick="app.closeModal('modalNewProject')">Batal</button>
+          <button type="submit" class="btn btn-primary">Buat Proyek</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- PRINT-READY DOCUMENT TEMPLATE (A4) -->
+  <div id="printDocumentModal" class="modal-backdrop print-modal-backdrop">
+    <div class="print-preview-container">
+      <div class="print-preview-header">
+        <h3>Pratinjau Cetak RAB Resmi A4</h3>
+        <div class="print-preview-actions">
+          <button class="btn btn-secondary" onclick="app.closeModal('printDocumentModal')">Tutup</button>
+          <button class="btn btn-accent" onclick="window.print()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 6 2 18 2 18 9" />
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+              <rect x="6" y="14" width="12" height="8" />
+            </svg>
+            Cetak Sekarang / Simpan PDF
+          </button>
+        </div>
+      </div>
+
+      <!-- Printable A4 sheet -->
+      <div class="a4-sheet" id="printableContent">
+        <div class="print-header">
+          <div class="print-kop-title">
+            <h2>RENCANA ANGGARAN BIAYA (RAB)</h2>
+            <p>STANDAR PERMEN PUPR / DJBK NO. 47 TAHUN 2026 & HSD JAWA TENGAH</p>
+          </div>
+          <div class="print-divider-thick"></div>
+        </div>
+
+        <table class="print-meta-table">
+          <tr>
+            <td style="width: 18%;">Nama Proyek</td>
+            <td style="width: 2%;">:</td>
+            <td style="width: 45%; font-weight: 700;" id="pNamaProyek">-</td>
+            <td style="width: 15%;">Tanggal</td>
+            <td style="width: 2%;">:</td>
+            <td style="width: 18%;" id="pTanggal">-</td>
+          </tr>
+          <tr>
+            <td>Pemilik / Klien</td>
+            <td>:</td>
+            <td id="pKlien">-</td>
+            <td>Wilayah HSD</td>
+            <td>:</td>
+            <td id="pWilayah">-</td>
+          </tr>
+          <tr>
+            <td>Lokasi Proyek</td>
+            <td>:</td>
+            <td id="pLokasi">-</td>
+            <td>Luas Bangunan</td>
+            <td>:</td>
+            <td id="pLuasBangunan">-</td>
+          </tr>
+          <tr>
+            <td>Kontraktor</td>
+            <td>:</td>
+            <td id="pKontraktor">-</td>
+            <td>Standar Acuan</td>
+            <td>:</td>
+            <td>DJBK 2026 & WBS</td>
+          </tr>
+        </table>
+
+        <!-- Table for print -->
+        <table class="print-data-table" id="printDataTable">
+          <thead>
+            <tr>
+              <th style="width: 35px;">No</th>
+              <th style="width: 80px;">Kode</th>
+              <th style="width: 130px;">Kategori</th>
+              <th>Uraian Pekerjaan</th>
+              <th style="width: 65px; text-align: right;">Vol</th>
+              <th style="width: 45px; text-align: center;">Sat</th>
+              <th style="width: 110px; text-align: right;">Harga Satuan</th>
+              <th style="width: 120px; text-align: right;">Subtotal</th>
+            </tr>
+          </thead>
+          <tbody id="printTableBody">
+            <!-- Populated by JS -->
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="7" style="text-align: right; font-weight: 600;">Subtotal Biaya Riil (Bahan & Upah HSD)</td>
+              <td style="text-align: right; font-weight: 700;" id="pSubtotalRiil">Rp 0</td>
+            </tr>
+            <tr>
+              <td colspan="7" style="text-align: right;" id="pLabelMargin">Jasa Kontraktor (10%)</td>
+              <td style="text-align: right;" id="pMargin">Rp 0</td>
+            </tr>
+            <tr>
+              <td colspan="7" style="text-align: right;" id="pLabelContingency">Biaya Tak Terduga (5%)</td>
+              <td style="text-align: right;" id="pContingency">Rp 0</td>
+            </tr>
+            <tr>
+              <td colspan="7" style="text-align: right;" id="pLabelPpn">PPN (11%)</td>
+              <td style="text-align: right;" id="pPpn">Rp 0</td>
+            </tr>
+            <tr class="grand-total-row">
+              <td colspan="7" style="text-align: right; font-weight: 800; font-size: 1.05rem;">TOTAL ESTIMASI RAB</td>
+              <td style="text-align: right; font-weight: 800; font-size: 1.05rem;" id="pGrandTotal">Rp 0</td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <div class="print-terbilang-box">
+          <strong>Terbilang: </strong>
+          <span id="pTerbilangText" style="font-style: italic;">-</span>
+        </div>
+
+        <div class="print-signatures">
+          <div class="sig-box">
+            <p>Disetujui Oleh,</p>
+            <p class="sig-role">Pemilik / Klien</p>
+            <div class="sig-space"></div>
+            <p class="sig-name" id="pSigKlien">( ............................................ )</p>
+          </div>
+          <div class="sig-box">
+            <p>Diajukan Oleh,</p>
+            <p class="sig-role">Pelaksana / Kontraktor</p>
+            <div class="sig-space"></div>
+            <p class="sig-name" id="pSigKontraktor">( ............................................ )</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE BOTTOM BAR (ACTIVE ON SMARTPHONES ONLY) -->
+  <div class="mobile-bottom-bar" id="mobileBottomBar">
+    <div class="mobile-bottom-total">
+      <span class="m-lbl">TOTAL RAB:</span>
+      <span class="m-val" id="mobileBottomGrandTotal">Rp 0</span>
+    </div>
+    <div class="mobile-bottom-actions">
+      <button class="btn btn-sm btn-accent" onclick="app.openManualItemModal()" title="Tambah Item">
+        + Item
+      </button>
+      <button class="btn btn-sm btn-primary" onclick="app.saveCurrentProject(true)" title="Simpan">
+        💾 Simpan
+      </button>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATIONS -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- SCRIPTS -->
+  <script src="js/app.js"></script>
+</body>
+
+</html>

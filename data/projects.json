@@ -1,0 +1,255 @@
+[
+  {
+    "id": "proj-rumah-2-lantai-boyolali",
+    "namaProyek": "Pembangunan Rumah 2 Lantai",
+    "klien": "Bpk. Joko Wahyudi",
+    "lokasi": "Jl. Pandanaran No. 45, Kabupaten Boyolali",
+    "wilayah": "Kabupaten Boyolali",
+    "faktorWilayah": 1,
+    "luasBangunan": 140,
+    "luasTanah": 120,
+    "tanggal": "2026-11-04",
+    "kontraktor": "CV Boyolali Karya Mandiri",
+    "marginPersen": 10,
+    "ppnPersen": 11,
+    "biayaTakTerdugaPersen": 5,
+    "catatan": "Pembangunan Rumah Tinggal 2 Lantai berlokasi di Kabupaten Boyolali. Mengacu pada Standar AHSP DJBK No. 47 Tahun 2026 Cipta Karya, HSD Kabupaten Boyolali 2026 (Faktor 1.0x), dan Standar WBS.",
+    "standarAcuan": "DJBK No. 47 Tahun 2026 - Cipta Karya & HSD Jateng 2026",
+    "items": [
+      {
+        "id": "it-wbs-101",
+        "kode": "1.1.4.2",
+        "kategori": "Pekerjaan Persiapan",
+        "nama": "Pasangan 1 m' bouwplank",
+        "volume": 48,
+        "satuan": "m'",
+        "hargaSatuan": 171500
+      },
+      {
+        "id": "it-wbs-102",
+        "kode": "1.1.1.1",
+        "kategori": "Pekerjaan Persiapan",
+        "nama": "Pembersihan dan perataan lapangan area kerja",
+        "volume": 120,
+        "satuan": "m²",
+        "hargaSatuan": 18500
+      },
+      {
+        "id": "it-wbs-201",
+        "kode": "1.2.1.1.1",
+        "kategori": "Pekerjaan Tanah",
+        "nama": "Penggalian 1 m3 tanah biasa sedalam 0 s.d. 1 m secara manual",
+        "volume": 54,
+        "satuan": "m³",
+        "hargaSatuan": 90800
+      },
+      {
+        "id": "it-wbs-202",
+        "kode": "1.3.1.1",
+        "kategori": "Pekerjaan Tanah",
+        "nama": "1 m3 urukan kembali galian tanah tanpa pemadatan secara manual",
+        "volume": 18,
+        "satuan": "m³",
+        "hargaSatuan": 60500
+      },
+      {
+        "id": "it-wbs-301",
+        "kode": "2.2.2.1.1",
+        "kategori": "Pekerjaan Pondasi",
+        "nama": "Pemasangan 1 m3 batu kosong (anstamping) untuk pondasi gedung",
+        "volume": 8.5,
+        "satuan": "m³",
+        "hargaSatuan": 657500
+      },
+      {
+        "id": "it-wbs-302",
+        "kode": "1.3.2",
+        "kategori": "Pekerjaan Pondasi",
+        "nama": "Pasangan Pondasi Batu Kali Campuran 1:4",
+        "volume": 28,
+        "satuan": "m³",
+        "hargaSatuan": 980000
+      },
+      {
+        "id": "it-wbs-303",
+        "kode": "2.2.1.3.1",
+        "kategori": "Pekerjaan Pondasi",
+        "nama": "Pemasangan 1 m2 bekisting untuk pondasi telapak (3 kali pakai)",
+        "volume": 16,
+        "satuan": "m²",
+        "hargaSatuan": 254500
+      },
+      {
+        "id": "it-wbs-401",
+        "kode": "2.2.1.3.2",
+        "kategori": "Struktur Lantai 1",
+        "nama": "Pemasangan 1 m2 bekisting untuk sloof (3 kali pakai)",
+        "volume": 38,
+        "satuan": "m²",
+        "hargaSatuan": 272100
+      },
+      {
+        "id": "it-wbs-402",
+        "kode": "2.2.1.3.3",
+        "kategori": "Struktur Lantai 1",
+        "nama": "Pemasangan 1 m2 bekisting untuk kolom Lantai 1 (3 kali pakai)",
+        "volume": 42,
+        "satuan": "m²",
+        "hargaSatuan": 226400
+      },
+      {
+        "id": "it-wbs-403",
+        "kode": "2.2.1.4.5",
+        "kategori": "Struktur Lantai 1",
+        "nama": "1 m3 beton mutu sedang f'c 20 MPa untuk sloof dan kolom",
+        "volume": 14.5,
+        "satuan": "m³",
+        "hargaSatuan": 1325100
+      },
+      {
+        "id": "it-wbs-404",
+        "kode": "2.2.1.1.3",
+        "kategori": "Struktur Lantai 1",
+        "nama": "1 kg penulangan kolom, balok, ring balok, dan sloof BjTS",
+        "volume": 1450,
+        "satuan": "kg",
+        "hargaSatuan": 17000
+      },
+      {
+        "id": "it-wbs-501",
+        "kode": "2.2.1.3.5",
+        "kategori": "Struktur Lantai 2",
+        "nama": "Pemasangan 1 m2 bekisting untuk plat lantai 2 (3 kali pakai)",
+        "volume": 70,
+        "satuan": "m²",
+        "hargaSatuan": 241200
+      },
+      {
+        "id": "it-wbs-502",
+        "kode": "2.2.1.3.4",
+        "kategori": "Struktur Lantai 2",
+        "nama": "Pemasangan 1 m2 bekisting untuk balok Lantai 2 (3 kali pakai)",
+        "volume": 36,
+        "satuan": "m²",
+        "hargaSatuan": 238600
+      },
+      {
+        "id": "it-wbs-503",
+        "kode": "2.2.1.4.5",
+        "kategori": "Struktur Lantai 2",
+        "nama": "1 m3 beton mutu sedang f'c 20 MPa untuk plat dan balok Lt. 2",
+        "volume": 12.8,
+        "satuan": "m³",
+        "hargaSatuan": 1325100
+      },
+      {
+        "id": "it-wbs-504",
+        "kode": "2.2.1.1.5",
+        "kategori": "Struktur Lantai 2",
+        "nama": "1 kg penulangan wiremesh M8 untuk plat lantai 2",
+        "volume": 820,
+        "satuan": "kg",
+        "hargaSatuan": 13800
+      },
+      {
+        "id": "it-wbs-601",
+        "kode": "3.6.4.2",
+        "kategori": "Pekerjaan Dinding",
+        "nama": "Pemasangan 1 m2 dinding bata ringan tebal 10 cm dengan mortar siap pakai",
+        "volume": 240,
+        "satuan": "m²",
+        "hargaSatuan": 146800
+      },
+      {
+        "id": "it-wbs-602",
+        "kode": "3.7.1",
+        "kategori": "Pekerjaan Dinding",
+        "nama": "Pemasangan 1 m2 plesteran 1SP : 1PP tebal 15 mm",
+        "volume": 480,
+        "satuan": "m²",
+        "hargaSatuan": 67600
+      },
+      {
+        "id": "it-wbs-603",
+        "kode": "3.7.8",
+        "kategori": "Pekerjaan Dinding",
+        "nama": "Pemasangan 1 m2 acian dinding",
+        "volume": 480,
+        "satuan": "m²",
+        "hargaSatuan": 45200
+      },
+      {
+        "id": "it-wbs-701",
+        "kode": "2.1.1.1",
+        "kategori": "Struktur Atap",
+        "nama": "Pemasangan 1 m2 rangka atap pelana baja ringan (canai dingin) profil C75",
+        "volume": 88,
+        "satuan": "m²",
+        "hargaSatuan": 522400
+      },
+      {
+        "id": "it-wbs-702",
+        "kode": "3.1.1.1",
+        "kategori": "Struktur Atap",
+        "nama": "Pemasangan 1 m2 atap Genteng Palentong / Metal Pasir",
+        "volume": 88,
+        "satuan": "m²",
+        "hargaSatuan": 107400
+      },
+      {
+        "id": "it-wbs-703",
+        "kode": "3.5.2.6",
+        "kategori": "Struktur Atap",
+        "nama": "Plafon Gypsum Board 9 mm Rangka Hollow Galvanis 4x4",
+        "volume": 130,
+        "satuan": "m²",
+        "hargaSatuan": 125000
+      },
+      {
+        "id": "it-wbs-801",
+        "kode": "3.9.7.3",
+        "kategori": "Lantai dan Finishing",
+        "nama": "Pemasangan 1 m2 lantai granit / keramik tile 60x60 cm",
+        "volume": 115,
+        "satuan": "m²",
+        "hargaSatuan": 240400
+      },
+      {
+        "id": "it-wbs-802",
+        "kode": "3.8.10.1",
+        "kategori": "Lantai dan Finishing",
+        "nama": "Pengecatan 1 m2 tembok baru Interior (1 lapis cat dasar, 2 lapis cat penutup)",
+        "volume": 480,
+        "satuan": "m²",
+        "hargaSatuan": 70100
+      },
+      {
+        "id": "it-wbs-803",
+        "kode": "3.8.10.2",
+        "kategori": "Lantai dan Finishing",
+        "nama": "Pengecatan 1 m2 tembok baru Eksterior (1 lapis cat dasar, 2 lapis cat penutup)",
+        "volume": 140,
+        "satuan": "m²",
+        "hargaSatuan": 75900
+      },
+      {
+        "id": "it-wbs-901",
+        "kode": "5.5.4.11",
+        "kategori": "Plumbing dan Sanitasi",
+        "nama": "Pemasangan 1 m' pipa PVC AW dia. 1/2 inch untuk instalasi air bersih",
+        "volume": 42,
+        "satuan": "m'",
+        "hargaSatuan": 26000
+      },
+      {
+        "id": "it-wbs-902",
+        "kode": "5.5.4.12",
+        "kategori": "Plumbing dan Sanitasi",
+        "nama": "Pemasangan 1 m' pipa PVC AW dia. 3/4 inch untuk saluran utama",
+        "volume": 28,
+        "satuan": "m'",
+        "hargaSatuan": 35200
+      }
+    ]
+  }
+]

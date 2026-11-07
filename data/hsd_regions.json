@@ -1,0 +1,457 @@
+[
+  {
+    "nama": "Kabupaten Cilacap",
+    "faktor": 1,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 130000,
+      "tukang": 152500,
+      "mandor": 190000,
+      "semen": 78500,
+      "pasir": 290000,
+      "batuBata": 950
+    }
+  },
+  {
+    "nama": "Kabupaten Banyumas",
+    "faktor": 0.99,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 128700,
+      "tukang": 150975,
+      "mandor": 188100,
+      "semen": 77715,
+      "pasir": 287100,
+      "batuBata": 940
+    }
+  },
+  {
+    "nama": "Kabupaten Purbalingga",
+    "faktor": 0.98,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 127400,
+      "tukang": 149450,
+      "mandor": 186200,
+      "semen": 76930,
+      "pasir": 284200,
+      "batuBata": 931
+    }
+  },
+  {
+    "nama": "Kabupaten Banjarnegara",
+    "faktor": 1,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 130000,
+      "tukang": 152500,
+      "mandor": 190000,
+      "semen": 78500,
+      "pasir": 290000,
+      "batuBata": 950
+    }
+  },
+  {
+    "nama": "Kabupaten Kebumen",
+    "faktor": 0.98,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 127400,
+      "tukang": 149450,
+      "mandor": 186200,
+      "semen": 76930,
+      "pasir": 284200,
+      "batuBata": 931
+    }
+  },
+  {
+    "nama": "Kabupaten Purworejo",
+    "faktor": 1,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 130000,
+      "tukang": 152500,
+      "mandor": 190000,
+      "semen": 78500,
+      "pasir": 290000,
+      "batuBata": 950
+    }
+  },
+  {
+    "nama": "Kabupaten Wonosobo",
+    "faktor": 1.02,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 132600,
+      "tukang": 155550,
+      "mandor": 193800,
+      "semen": 80070,
+      "pasir": 295800,
+      "batuBata": 969
+    }
+  },
+  {
+    "nama": "Kabupaten Magelang",
+    "faktor": 1.02,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 132600,
+      "tukang": 155550,
+      "mandor": 193800,
+      "semen": 80070,
+      "pasir": 295800,
+      "batuBata": 969
+    }
+  },
+  {
+    "nama": "Kabupaten Boyolali",
+    "faktor": 1,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 130000,
+      "tukang": 152500,
+      "mandor": 190000,
+      "semen": 78500,
+      "pasir": 290000,
+      "batuBata": 950
+    }
+  },
+  {
+    "nama": "Kabupaten Klaten",
+    "faktor": 1.01,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 131300,
+      "tukang": 154025,
+      "mandor": 191900,
+      "semen": 79285,
+      "pasir": 292900,
+      "batuBata": 960
+    }
+  },
+  {
+    "nama": "Kabupaten Sukoharjo",
+    "faktor": 1.02,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 132600,
+      "tukang": 155550,
+      "mandor": 193800,
+      "semen": 80070,
+      "pasir": 295800,
+      "batuBata": 969
+    }
+  },
+  {
+    "nama": "Kabupaten Wonogiri",
+    "faktor": 1.01,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 131300,
+      "tukang": 154025,
+      "mandor": 191900,
+      "semen": 79285,
+      "pasir": 292900,
+      "batuBata": 960
+    }
+  },
+  {
+    "nama": "Kabupaten Karanganyar",
+    "faktor": 1.03,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 133900,
+      "tukang": 157075,
+      "mandor": 195700,
+      "semen": 80855,
+      "pasir": 298700,
+      "batuBata": 978
+    }
+  },
+  {
+    "nama": "Kabupaten Sragen",
+    "faktor": 0.99,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 128700,
+      "tukang": 150975,
+      "mandor": 188100,
+      "semen": 77715,
+      "pasir": 287100,
+      "batuBata": 940
+    }
+  },
+  {
+    "nama": "Kabupaten Grobogan",
+    "faktor": 0.98,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 127400,
+      "tukang": 149450,
+      "mandor": 186200,
+      "semen": 76930,
+      "pasir": 284200,
+      "batuBata": 931
+    }
+  },
+  {
+    "nama": "Kabupaten Blora",
+    "faktor": 1.02,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 132600,
+      "tukang": 155550,
+      "mandor": 193800,
+      "semen": 80070,
+      "pasir": 295800,
+      "batuBata": 969
+    }
+  },
+  {
+    "nama": "Kabupaten Rembang",
+    "faktor": 1.03,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 133900,
+      "tukang": 157075,
+      "mandor": 195700,
+      "semen": 80855,
+      "pasir": 298700,
+      "batuBata": 978
+    }
+  },
+  {
+    "nama": "Kabupaten Pati",
+    "faktor": 1,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 130000,
+      "tukang": 152500,
+      "mandor": 190000,
+      "semen": 78500,
+      "pasir": 290000,
+      "batuBata": 950
+    }
+  },
+  {
+    "nama": "Kabupaten Kudus",
+    "faktor": 1.04,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 135200,
+      "tukang": 158600,
+      "mandor": 197600,
+      "semen": 81640,
+      "pasir": 301600,
+      "batuBata": 988
+    }
+  },
+  {
+    "nama": "Kabupaten Jepara",
+    "faktor": 1.05,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 136500,
+      "tukang": 160125,
+      "mandor": 199500,
+      "semen": 82425,
+      "pasir": 304500,
+      "batuBata": 998
+    }
+  },
+  {
+    "nama": "Kabupaten Demak",
+    "faktor": 1.02,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 132600,
+      "tukang": 155550,
+      "mandor": 193800,
+      "semen": 80070,
+      "pasir": 295800,
+      "batuBata": 969
+    }
+  },
+  {
+    "nama": "Kabupaten Semarang",
+    "faktor": 1.05,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 136500,
+      "tukang": 160125,
+      "mandor": 199500,
+      "semen": 82425,
+      "pasir": 304500,
+      "batuBata": 998
+    }
+  },
+  {
+    "nama": "Kabupaten Temanggung",
+    "faktor": 1.01,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 131300,
+      "tukang": 154025,
+      "mandor": 191900,
+      "semen": 79285,
+      "pasir": 292900,
+      "batuBata": 960
+    }
+  },
+  {
+    "nama": "Kabupaten Kendal",
+    "faktor": 1.04,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 135200,
+      "tukang": 158600,
+      "mandor": 197600,
+      "semen": 81640,
+      "pasir": 301600,
+      "batuBata": 988
+    }
+  },
+  {
+    "nama": "Kabupaten Batang",
+    "faktor": 1.02,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 132600,
+      "tukang": 155550,
+      "mandor": 193800,
+      "semen": 80070,
+      "pasir": 295800,
+      "batuBata": 969
+    }
+  },
+  {
+    "nama": "Kabupaten Pekalongan",
+    "faktor": 1.03,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 133900,
+      "tukang": 157075,
+      "mandor": 195700,
+      "semen": 80855,
+      "pasir": 298700,
+      "batuBata": 978
+    }
+  },
+  {
+    "nama": "Kabupaten Pemalang",
+    "faktor": 1,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 130000,
+      "tukang": 152500,
+      "mandor": 190000,
+      "semen": 78500,
+      "pasir": 290000,
+      "batuBata": 950
+    }
+  },
+  {
+    "nama": "Kabupaten Tegal",
+    "faktor": 1.01,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 131300,
+      "tukang": 154025,
+      "mandor": 191900,
+      "semen": 79285,
+      "pasir": 292900,
+      "batuBata": 960
+    }
+  },
+  {
+    "nama": "Kabupaten Brebes",
+    "faktor": 0.99,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 128700,
+      "tukang": 150975,
+      "mandor": 188100,
+      "semen": 77715,
+      "pasir": 287100,
+      "batuBata": 940
+    }
+  },
+  {
+    "nama": "Kota Magelang",
+    "faktor": 1.04,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 135200,
+      "tukang": 158600,
+      "mandor": 197600,
+      "semen": 81640,
+      "pasir": 301600,
+      "batuBata": 988
+    }
+  },
+  {
+    "nama": "Kota Surakarta",
+    "faktor": 1.06,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 137800,
+      "tukang": 161650,
+      "mandor": 201400,
+      "semen": 83210,
+      "pasir": 307400,
+      "batuBata": 1007
+    }
+  },
+  {
+    "nama": "Kota Salatiga",
+    "faktor": 1.05,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 136500,
+      "tukang": 160125,
+      "mandor": 199500,
+      "semen": 82425,
+      "pasir": 304500,
+      "batuBata": 998
+    }
+  },
+  {
+    "nama": "Kota Semarang",
+    "faktor": 1.1,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 143000,
+      "tukang": 167750,
+      "mandor": 209000,
+      "semen": 86350,
+      "pasir": 319000,
+      "batuBata": 1045
+    }
+  },
+  {
+    "nama": "Kota Pekalongan",
+    "faktor": 1.04,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 135200,
+      "tukang": 158600,
+      "mandor": 197600,
+      "semen": 81640,
+      "pasir": 301600,
+      "batuBata": 988
+    }
+  },
+  {
+    "nama": "Kota Tegal",
+    "faktor": 1.04,
+    "itemCount": 114,
+    "ringkasan": {
+      "pekerja": 135200,
+      "tukang": 158600,
+      "mandor": 197600,
+      "semen": 81640,
+      "pasir": 301600,
+      "batuBata": 988
+    }
+  }
+]
